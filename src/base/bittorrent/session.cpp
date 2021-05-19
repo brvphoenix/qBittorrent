@@ -95,6 +95,7 @@
 #include "ltunderlyingtype.h"
 #include "magneturi.h"
 #include "nativesessionextension.h"
+#include "peeraddress.h"
 #include "portforwarderimpl.h"
 #include "statistics.h"
 #include "torrentimpl.h"
@@ -1419,7 +1420,7 @@ void Session::configureNetworkInterfaces(lt::settings_pack &settingsPack)
     if (m_listenInterfaceConfigured)
         return;
 
-    const int port = useRandomPort() ? 0 : this->port();
+    const ushort port = useRandomPort() ? 0 : this->port();
     if (port > 0)  // user specified port
         settingsPack.set_int(lt::settings_pack::max_retry_port_bind, 0);
 
@@ -1429,18 +1430,17 @@ void Session::configureNetworkInterfaces(lt::settings_pack &settingsPack)
 
     for (const QString &ip : asConst(getListeningIPs()))
     {
-        const QHostAddress addr {ip};
-        if (!addr.isNull())
+        PeerAddress addr {QHostAddress(ip), port};
+        if (!addr.ip.isNull())
         {
-            const bool isIPv6 = (addr.protocol() == QAbstractSocket::IPv6Protocol);
-            const QString ip = isIPv6
-                          ? Utils::Net::canonicalIPv6Addr(addr).toString()
-                          : addr.toString();
+            addr.ip = ((addr.ip.protocol() == QAbstractSocket::IPv6Protocol)
+                          ? Utils::Net::canonicalIPv6Addr(addr.ip)
+                          : addr.ip);
 
-            endpoints << ((isIPv6 ? ('[' + ip + ']') : ip) + portString);
+            endpoints << addr.toString();
 
-            if ((ip != QLatin1String("0.0.0.0")) && (ip != QLatin1String("::")))
-                outgoingInterfaces << ip;
+            if (addr.ip != QHostAddress::AnyIPv4 && addr.ip != QHostAddress::AnyIPv6)
+                outgoingInterfaces << addr.ip.toString();
         }
         else
         {

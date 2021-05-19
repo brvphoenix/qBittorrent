@@ -340,10 +340,8 @@ void PeerListWidget::copySelectedPeers()
         const QString ip = m_listModel->item(row, PeerListColumns::IP_HIDDEN)->text();
         const QString port = m_listModel->item(row, PeerListColumns::PORT)->text();
 
-        if (!ip.contains('.'))  // IPv6
-            selectedPeers << ('[' + ip + "]:" + port);
-        else  // IPv4
-            selectedPeers << (ip + ':' + port);
+        BitTorrent::PeerAddress addr = {QHostAddress(ip), port.toUShort()};
+        selectedPeers << addr.toString();
     }
 
     QApplication::clipboard()->setText(selectedPeers.join('\n'));
