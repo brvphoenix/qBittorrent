@@ -291,10 +291,7 @@ QVector<QUrl> TorrentInfo::urlSeeds() const
     urlSeeds.reserve(static_cast<decltype(urlSeeds)::size_type>(nativeWebSeeds.size()));
 
     for (const lt::web_seed_entry &webSeed : nativeWebSeeds)
-    {
-        if (webSeed.type == lt::web_seed_entry::url_seed)
-            urlSeeds.append(QUrl(QString::fromStdString(webSeed.url)));
-    }
+        urlSeeds.append(QUrl(QString::fromStdString(webSeed.url)));
 
     return urlSeeds;
 }

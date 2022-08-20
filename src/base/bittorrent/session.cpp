@@ -89,6 +89,7 @@
 #include "base/utils/misc.h"
 #include "base/utils/net.h"
 #include "base/utils/random.h"
+#include "base/utils/string.h"
 #include "base/version.h"
 #include "bandwidthscheduler.h"
 #include "bencoderesumedatastorage.h"
@@ -1406,6 +1407,10 @@ void Session::initializeNativeSession()
 #ifdef QBT_USES_LIBTORRENT2
     switch (diskIOType())
     {
+    case DiskIOType::MTRW:
+        sessionParams.disk_io_constructor = customPReadDiskIOConstructor;
+        LogMsg(tr("Disk_IO_Type: %1").arg(Utils::String::fromEnum(diskIOType())));
+        break;
     case DiskIOType::Posix:
         sessionParams.disk_io_constructor = customPosixDiskIOConstructor;
         break;
@@ -1417,7 +1422,9 @@ void Session::initializeNativeSession()
         break;
     }
 #endif
-    m_nativeSession = new lt::session(sessionParams, lt::session::paused);
+//    m_nativeSession = new lt::session(sessionParams, lt::session::paused);
+    m_nativeSession = new lt::session(sessionParams);
+    m_nativeSession->pause();
 
     LogMsg(tr("Peer ID: \"%1\"").arg(QString::fromStdString(peerId)), Log::INFO);
     LogMsg(tr("HTTP User-Agent: \"%1\"").arg(USER_AGENT), Log::INFO);
