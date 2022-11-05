@@ -119,6 +119,7 @@ void AppController::preferencesAction()
     data[u"file_log_delete_old"_qs] = app()->isFileLoggerDeleteOld();
     data[u"file_log_age"_qs] = app()->fileLoggerAge();
     data[u"file_log_age_type"_qs] = app()->fileLoggerAgeType();
+    data[u"file_log_compress_backups"_qs] = app()->isFileLoggerCompressBackups();
 
     // Downloads
     // When adding a torrent
@@ -458,6 +459,8 @@ void AppController::setPreferencesAction()
         app()->setFileLoggerAge(it.value().toInt());
     if (hasKey(u"file_log_age_type"_qs))
         app()->setFileLoggerAgeType(it.value().toInt());
+    if (hasKey(u"file_log_compress_backups"_qs))
+        app()->setFileLoggerCompressBackups(it.value().toBool());
 
     // Downloads
     // When adding a torrent
