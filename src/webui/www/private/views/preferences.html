@@ -86,6 +86,10 @@
                         </select>
                     </td>
                 </tr>
+                <tr title="QBT_TR(Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.)QBT_TR[CONTEXT=OptionsDialog]">
+                    <td><input type="checkbox" id="filelog_compress_backups_checkbox" /></td>
+                    <td><label for="filelog_compress_backups_checkbox">QBT_TR(Compress log backups with gzip)QBT_TR[CONTEXT=OptionsDialog]</label></td>
+                </tr>
             </tbody>
         </table>
     </fieldset>
@@ -1793,6 +1797,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             $("filelog_save_path_input").disabled = !isFileLogEnabled;
             $("filelog_backup_checkbox").disabled = !isFileLogEnabled;
             $("filelog_delete_old_checkbox").disabled = !isFileLogEnabled;
+            $("filelog_compress_backups_checkbox").disabled = !isFileLogEnabled;
 
             updateFileLogBackupEnabled();
             updateFileLogDeleteEnabled();
@@ -2215,6 +2220,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                     $("filelog_delete_old_checkbox").checked = pref.file_log_delete_old;
                     $("filelog_age_input").value = pref.file_log_age;
                     $("filelog_age_type_select").value = pref.file_log_age_type;
+                    $("filelog_compress_backups_checkbox").checked = pref.file_log_compress_backups;
                     updateFileLogEnabled();
 
                     // Downloads tab
@@ -2646,6 +2652,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             settings["file_log_delete_old"] = $("filelog_delete_old_checkbox").checked;
             settings["file_log_age"] = Number($("filelog_age_input").value);
             settings["file_log_age_type"] = Number($("filelog_age_type_select").value);
+            settings["file_log_compress_backups"] = $("filelog_compress_backups_checkbox").checked;
 
             // Downloads tab
             // When adding a torrent
