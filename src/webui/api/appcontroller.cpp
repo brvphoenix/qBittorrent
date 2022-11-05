@@ -135,8 +135,7 @@ void AppController::preferencesAction()
     data[u"file_log_delete_old"_s] = app()->isFileLoggerDeleteOld();
     data[u"file_log_age"_s] = app()->fileLoggerAge();
     data[u"file_log_age_type"_s] = app()->fileLoggerAgeType();
-    // Delete torrent contents files on torrent removal
-    data[u"delete_torrent_content_files"_s] = pref->removeTorrentContent();
+    data[u"file_log_compress_backups"_s] = app()->isFileLoggerCompressBackups();
 
     // Downloads
     // When adding a torrent
@@ -521,9 +520,8 @@ void AppController::setPreferencesAction()
         app()->setFileLoggerAge(it.value().toInt());
     if (hasKey(u"file_log_age_type"_s))
         app()->setFileLoggerAgeType(it.value().toInt());
-    // Delete torrent content files on torrent removal
-    if (hasKey(u"delete_torrent_content_files"_s))
-        pref->setRemoveTorrentContent(it.value().toBool());
+    if (hasKey(u"file_log_compress_backups"_s))
+        app()->setFileLoggerCompressBackups(it.value().toBool());
 
     // Downloads
     // When adding a torrent
