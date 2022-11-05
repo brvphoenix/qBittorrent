@@ -120,6 +120,10 @@
                         </select>
                     </td>
                 </tr>
+                <tr title="QBT_TR(Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.)QBT_TR[CONTEXT=OptionsDialog]">
+                    <td><input type="checkbox" id="filelog_compress_backups_checkbox" /></td>
+                    <td><label for="filelog_compress_backups_checkbox">QBT_TR(Compress log backups with gzip)QBT_TR[CONTEXT=OptionsDialog]</label></td>
+                </tr>
             </tbody>
         </table>
     </fieldset>
@@ -1490,7 +1494,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                 </tr>
                 <tr id="rowCoalesceReadsAndWrites">
                     <td>
-                        <label for="coalesceReadsAndWrites">QBT_TR(Coalesce reads &amp; writes:)QBT_TR[CONTEXT=OptionsDialog]&nbsp;<a href="https://www.libtorrent.org/reference-Settings.html#coalesce_reads" target="_blank">(?)</a></label>
+                        <label for="coalesceReadsAndWrites">QBT_TR(Coalesce reads & writes:)QBT_TR[CONTEXT=OptionsDialog]&nbsp;<a href="https://www.libtorrent.org/reference-Settings.html#coalesce_reads" target="_blank">(?)</a></label>
                     </td>
                     <td>
                         <input type="checkbox" id="coalesceReadsAndWrites">
@@ -1880,6 +1884,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             document.getElementById("filelog_save_path_input").disabled = !isFileLogEnabled;
             document.getElementById("filelog_backup_checkbox").disabled = !isFileLogEnabled;
             document.getElementById("filelog_delete_old_checkbox").disabled = !isFileLogEnabled;
+            document.getElementById("filelog_compress_backups_checkbox").disabled = !isFileLogEnabled;
 
             updateFileLogBackupEnabled();
             updateFileLogDeleteEnabled();
@@ -2339,6 +2344,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                     document.getElementById("filelog_delete_old_checkbox").checked = pref.file_log_delete_old;
                     document.getElementById("filelog_age_input").value = pref.file_log_age;
                     document.getElementById("filelog_age_type_select").value = pref.file_log_age_type;
+                    document.getElementById("filelog_compress_backups_checkbox").checked = pref.file_log_compress_backups;
                     updateFileLogEnabled();
 
                     // Downloads tab
@@ -2788,6 +2794,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             settings["file_log_delete_old"] = document.getElementById("filelog_delete_old_checkbox").checked;
             settings["file_log_age"] = Number(document.getElementById("filelog_age_input").value);
             settings["file_log_age_type"] = Number(document.getElementById("filelog_age_type_select").value);
+            settings["file_log_compress_backups"] = document.getElementById("filelog_compress_backups_checkbox").checked;
 
             // Downloads tab
             // When adding a torrent
