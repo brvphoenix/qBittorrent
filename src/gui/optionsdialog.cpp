@@ -307,6 +307,7 @@ void OptionsDialog::loadBehaviorTabOptions()
     m_ui->spinFileLogSize->setValue(app()->fileLoggerMaxSize() / 1024);
     m_ui->spinFileLogAge->setValue(app()->fileLoggerAge());
     m_ui->comboFileLogAgeType->setCurrentIndex(app()->fileLoggerAgeType());
+    m_ui->checkFileLogCompressBackups->setChecked(app()->isFileLoggerCompressBackups());
     // Groupbox's check state  must be initialized after some of its children if they are manually enabled/disabled
     m_ui->checkFileLog->setChecked(app()->isFileLoggerEnabled());
 
@@ -365,6 +366,7 @@ void OptionsDialog::loadBehaviorTabOptions()
     connect(m_ui->spinFileLogSize, qSpinBoxValueChanged, this, &ThisType::enableApplyButton);
     connect(m_ui->spinFileLogAge, qSpinBoxValueChanged, this, &ThisType::enableApplyButton);
     connect(m_ui->comboFileLogAgeType, qComboBoxCurrentIndexChanged, this, &ThisType::enableApplyButton);
+    connect(m_ui->checkFileLogCompressBackups, &QAbstractButton::toggled, this, &ThisType::enableApplyButton);
 
     connect(m_ui->checkBoxPerformanceWarning, &QAbstractButton::toggled, this, &ThisType::enableApplyButton);
 }
@@ -450,6 +452,7 @@ void OptionsDialog::saveBehaviorTabOptions() const
     app()->setFileLoggerAgeType(m_ui->comboFileLogAgeType->currentIndex());
     app()->setFileLoggerDeleteOld(m_ui->checkFileLogDelete->isChecked());
     app()->setFileLoggerEnabled(m_ui->checkFileLog->isChecked());
+    app()->setFileLoggerCompressBackups(m_ui->checkFileLogCompressBackups->isChecked());
 
     session->setPerformanceWarningEnabled(m_ui->checkBoxPerformanceWarning->isChecked());
 }
