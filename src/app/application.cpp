@@ -260,6 +260,7 @@ Application::Application(int &argc, char **argv)
     , m_storeFileLoggerAge(FILELOGGER_SETTINGS_KEY(u"Age"_s))
     , m_storeFileLoggerAgeType(FILELOGGER_SETTINGS_KEY(u"AgeType"_s))
     , m_storeFileLoggerPath(FILELOGGER_SETTINGS_KEY(u"Path"_s))
+    , m_storeFileLoggerCompressBackups(FILELOGGER_SETTINGS_KEY(u"CompressBackups"_s))
     , m_storeMemoryWorkingSetLimit(SETTINGS_KEY(u"MemoryWorkingSetLimit"_s))
 #ifdef Q_OS_WIN
     , m_processMemoryPriority(SETTINGS_KEY(u"ProcessMemoryPriority"_s))
@@ -331,7 +332,12 @@ Application::Application(int &argc, char **argv)
     }
 
     if (isFileLoggerEnabled())
-        m_fileLogger = new FileLogger(fileLoggerPath(), isFileLoggerBackup(), fileLoggerMaxSize(), isFileLoggerDeleteOld(), fileLoggerAge(), static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType()));
+    {
+        m_fileLogger = new FileLogger(fileLoggerPath(), isFileLoggerBackup()
+                , fileLoggerMaxSize(), isFileLoggerDeleteOld(), fileLoggerAge()
+                , static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType())
+                , isFileLoggerCompressBackups());
+    }
 
     if (m_commandLineArgs.webUIPort > 0) // it will be -1 when user did not set any value
         Preferences::instance()->setWebUIPort(m_commandLineArgs.webUIPort);
@@ -428,7 +434,12 @@ bool Application::isFileLoggerEnabled() const
 void Application::setFileLoggerEnabled(const bool value)
 {
     if (value && !m_fileLogger)
-        m_fileLogger = new FileLogger(fileLoggerPath(), isFileLoggerBackup(), fileLoggerMaxSize(), isFileLoggerDeleteOld(), fileLoggerAge(), static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType()));
+    {
+        m_fileLogger = new FileLogger(fileLoggerPath(), isFileLoggerBackup()
+                , fileLoggerMaxSize(), isFileLoggerDeleteOld(), fileLoggerAge()
+                , static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType())
+                , isFileLoggerCompressBackups());
+    }
     else if (!value)
         delete m_fileLogger;
     m_storeFileLoggerEnabled = value;
@@ -465,8 +476,8 @@ bool Application::isFileLoggerDeleteOld() const
 
 void Application::setFileLoggerDeleteOld(const bool value)
 {
-    if (value && m_fileLogger)
-        m_fileLogger->deleteOld(fileLoggerAge(), static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType()));
+    if (m_fileLogger)
+        m_fileLogger->setDeleteOld(value);
     m_storeFileLoggerDeleteOld = value;
 }
 
@@ -492,7 +503,10 @@ int Application::fileLoggerAge() const
 
 void Application::setFileLoggerAge(const int value)
 {
-    m_storeFileLoggerAge = std::clamp(value, 1, 365);
+    const int clampedValue = std::clamp(value, 1, 365);
+    if (m_fileLogger)
+        m_fileLogger->setAge(clampedValue);
+    m_storeFileLoggerAge = clampedValue;
 }
 
 int Application::fileLoggerAgeType() const
@@ -503,7 +517,22 @@ int Application::fileLoggerAgeType() const
 
 void Application::setFileLoggerAgeType(const int value)
 {
-    m_storeFileLoggerAgeType = ((value < 0) || (value > 2)) ? 1 : value;
+    const int clampedValue = ((value < 0) || (value > 2)) ? 1 : value;
+    if (m_fileLogger)
+        m_fileLogger->setAgeType(static_cast<FileLogger::FileLogAgeType>(clampedValue));
+    m_storeFileLoggerAgeType = clampedValue;
+}
+
+bool Application::isFileLoggerCompressBackups() const
+{
+    return m_storeFileLoggerCompressBackups.get(false);
+}
+
+void Application::setFileLoggerCompressBackups(bool value)
+{
+    if (m_fileLogger)
+        m_fileLogger->setCompressBackups(value);
+    m_storeFileLoggerCompressBackups = value;
 }
 
 void Application::processMessage(const QString &message)
