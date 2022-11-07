@@ -1006,5 +1006,8 @@ void AppController::supportedLanguagesAction()
         qDebug() << "Supported locale:" << localeStr;
     }
 
+    if (languages.isEmpty())
+        languages.insert(u"en"_qs, Utils::Misc::languageToLocalizedString(u"en"_qs));
+
     setResult(languages);
 }

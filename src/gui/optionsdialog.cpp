@@ -1244,6 +1244,9 @@ void OptionsDialog::initializeLanguageCombo()
         m_ui->comboI18n->addItem(/*QIcon(":/icons/flags/"+country+".svg"), */ Utils::Misc::languageToLocalizedString(localeStr), localeStr);
         qDebug() << "Supported locale:" << localeStr;
     }
+
+    if (langFiles.isEmpty())
+        m_ui->comboI18n->addItem(Utils::Misc::languageToLocalizedString(u"en"_qs), u"en"_qs);
 }
 
 void OptionsDialog::changePage(QListWidgetItem *current, QListWidgetItem *previous)
