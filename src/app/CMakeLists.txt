@@ -1,4 +1,20 @@
+# Executable target configuration
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+add_executable(qbt_app)
+
 file(GLOB QBT_TS_FILES "${qBittorrent_SOURCE_DIR}/src/lang/*.ts")
+
+if (BUILD_WITH_LANG)
+    foreach (TS_FILE ${QBT_TS_FILES})
+        get_filename_component(TS_NAME ${TS_FILE} NAME_WE)
+        string(REGEX REPLACE "^qbittorrent_" "" TS_LANG "${TS_NAME}")
+        if(NOT TS_LANG IN_LIST BUILD_WITH_LANG)
+            list(REMOVE_ITEM QBT_TS_FILES ${TS_FILE})
+        endif()
+    endforeach()
+endif()
+
 # Custom target to update .ts files and include new strings from source files
 # Depends on Qt's LinguistTools
 get_target_property(QT_LUPDATE_EXECUTABLE Qt::lupdate IMPORTED_LOCATION)
@@ -16,21 +32,33 @@ add_custom_target(qbt_update_translations
 # Based on https://gist.github.com/giraldeau/546ba5512a74dfe9d8ea0862d66db412
 set_source_files_properties(${QBT_TS_FILES} PROPERTIES OUTPUT_LOCATION "${qBittorrent_BINARY_DIR}/src/lang")
 qt_add_translation(QBT_QM_FILES ${QBT_TS_FILES} OPTIONS -silent)
-configure_file("${qBittorrent_SOURCE_DIR}/src/lang/lang.qrc" "${qBittorrent_BINARY_DIR}/src/lang/lang.qrc" COPYONLY)
+
+qt_add_resources(qbt_app "lang"
+    PREFIX "/lang"
+    BASE ${qBittorrent_BINARY_DIR}/src/lang
+    FILES ${QBT_QM_FILES}
+)
 
 if (WEBUI)
     file(GLOB QBT_WEBUI_TS_FILES "${qBittorrent_SOURCE_DIR}/src/webui/www/translations/*.ts")
+    if (BUILD_WITH_LANG)
+        foreach (TS_FILE ${QBT_WEBUI_TS_FILES})
+            get_filename_component(TS_NAME ${TS_FILE} NAME_WE)
+            string(REGEX REPLACE "^webui_" "" TS_LANG "${TS_NAME}")
+            if(NOT TS_LANG IN_LIST BUILD_WITH_LANG)
+                list(REMOVE_ITEM QBT_WEBUI_TS_FILES ${TS_FILE})
+            endif()
+        endforeach()
+    endif()
     set_source_files_properties(${QBT_WEBUI_TS_FILES}
         PROPERTIES OUTPUT_LOCATION "${qBittorrent_BINARY_DIR}/src/webui/www/translations")
     qt_add_translation(QBT_WEBUI_QM_FILES ${QBT_WEBUI_TS_FILES} OPTIONS -silent)
-    configure_file("${qBittorrent_SOURCE_DIR}/src/webui/www/translations/webui_translations.qrc"
-        "${qBittorrent_BINARY_DIR}/src/webui/www/translations/webui_translations.qrc" COPYONLY)
+    qt_add_resources(qbt_app "webui_translation"
+        PREFIX "/www/translations"
+        BASE ${qBittorrent_BINARY_DIR}/src/webui/www/translations
+        FILES ${QBT_WEBUI_QM_FILES}
+    )
 endif()
-
-# Executable target configuration
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-add_executable(qbt_app)
 
 target_sources(qbt_app PRIVATE
     # headers
@@ -55,8 +83,6 @@ target_sources(qbt_app PRIVATE
     # resources
     "${qBittorrent_SOURCE_DIR}/src/icons/icons.qrc"
     "${qBittorrent_SOURCE_DIR}/src/searchengine/searchengine.qrc"
-    ${QBT_QM_FILES}
-    "${qBittorrent_BINARY_DIR}/src/lang/lang.qrc" # yes, it's supposed to be "*_BINARY_DIR"
 )
 
 target_link_libraries(qbt_app PRIVATE
@@ -155,10 +181,6 @@ if (STACKTRACE)
 endif()
 
 if (WEBUI)
-    target_sources(qbt_app PRIVATE
-        ${QBT_WEBUI_QM_FILES}
-        ${qBittorrent_BINARY_DIR}/src/webui/www/translations/webui_translations.qrc # yes, it's supposed to be "*_BINARY_DIR"
-    )
     target_link_libraries(qbt_app PRIVATE qbt_webui)
 endif()
 
