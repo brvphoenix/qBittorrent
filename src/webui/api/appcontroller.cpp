@@ -35,6 +35,7 @@
 
 #include <QCoreApplication>
 #include <QDebug>
+#include <QDir>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -990,4 +991,20 @@ void AppController::networkInterfaceAddressListAction()
     }
 
     setResult(addressList);
+}
+
+void AppController::supportedLanguagesAction()
+{
+    // List language files
+    const QDir langDir(u":/www/translations"_qs);
+    const QStringList langFiles = langDir.entryList(QStringList(u"webui_*.qm"_qs), QDir::Files);
+    QJsonObject languages;
+    for (const QString &langFile : langFiles)
+    {
+        QString localeStr = langFile.section(u"_"_qs, 1, -1).section(u"."_qs, 0, 0); // remove "webui_" and ".qm"
+        languages.insert(localeStr, Utils::Misc::languageToLocalizedString(localeStr));
+        qDebug() << "Supported locale:" << localeStr;
+    }
+
+    setResult(languages);
 }

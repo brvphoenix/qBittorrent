@@ -51,4 +51,6 @@ private slots:
 
     void networkInterfaceListAction();
     void networkInterfaceAddressListAction();
+
+    void supportedLanguagesAction();
 };
