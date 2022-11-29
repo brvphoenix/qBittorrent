@@ -45,7 +45,7 @@
 
 namespace
 {
-    const int MIGRATION_VERSION = 4;
+    const int MIGRATION_VERSION = 5;
     const QString MIGRATION_VERSION_KEY = u"Meta/MigrationVersion"_qs;
 
     void exportWebUIHttpsFiles()
@@ -384,6 +384,32 @@ namespace
         }
     }
 #endif
+
+    void migrateLocaleSettings()
+    {
+        const QString localeKey {u"Preferences/General/Locale"_qs};
+        struct ValMapping
+        {
+            QString oldVal;
+            QString newVal;
+        };
+
+        const ValMapping mappings[] =
+        {
+            {u"zh"_qs, u"zh_CN"_qs}
+        };
+
+        auto *settingsStorage = SettingsStorage::instance();
+        for (const ValMapping &mapping : mappings)
+        {
+            if (settingsStorage->hasKey(localeKey))
+            {
+                const auto value = settingsStorage->loadValue<QVariant>(localeKey);
+                if (value == mapping.oldVal)
+                    settingsStorage->storeValue(localeKey, mapping.newVal);
+            }
+        }
+    }
 }
 
 bool upgrade(const bool /*ask*/)
@@ -412,6 +438,9 @@ bool upgrade(const bool /*ask*/)
         if (version < 4)
             migrateMemoryPrioritySettings();
 #endif
+
+        if (version < 5)
+            migrateLocaleSettings();
 
         version = MIGRATION_VERSION;
     }
