@@ -34,6 +34,10 @@
                     </select>
                 </td>
             </tr>
+            <tr>
+                <td><input type="checkbox" id="filelog_compressed_checkbox" /></td>
+                <td><label for="filelog_compressed_checkbox">QBT_TR(Compress log files when backing up)QBT_TR[CONTEXT=OptionsDialog]</label></td>
+            </tr>
         </table>
     </fieldset>
 
@@ -1435,6 +1439,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             $('filelog_save_path_input').setProperty('disabled', !isFileLogEnabled);
             $('filelog_backup_checkbox').setProperty('disabled', !isFileLogEnabled);
             $('filelog_delete_old_checkbox').setProperty('disabled', !isFileLogEnabled);
+            $('filelog_compressed_checkbox').setProperty('disabled', !isFileLogEnabled);
 
             updateFileLogBackupEnabled();
             updateFileLogDeleteEnabled();
@@ -1799,6 +1804,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                         $('filelog_delete_old_checkbox').setProperty('checked', pref.file_log_delete_old);
                         $('filelog_age_input').setProperty('value', pref.file_log_age);
                         $('filelog_age_type_select').setProperty('value', pref.file_log_age_type);
+                        $('filelog_compressed_checkbox').setProperty('checked', pref.file_log_compressed);
                         updateFileLogEnabled();
 
                         // Downloads tab
@@ -2177,6 +2183,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             settings.set('file_log_delete_old', $('filelog_delete_old_checkbox').getProperty('checked'));
             settings.set('file_log_age', $('filelog_age_input').getProperty('value'));
             settings.set('file_log_age_type', $('filelog_age_type_select').getProperty('value'));
+            settings.set('file_log_compressed', $('filelog_compressed_checkbox').getProperty('checked'));
 
             // Downloads tab
             // When adding a torrent

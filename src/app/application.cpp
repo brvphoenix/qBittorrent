@@ -233,6 +233,7 @@ Application::Application(int &argc, char **argv)
     , m_storeFileLoggerAge(FILELOGGER_SETTINGS_KEY(u"Age"_qs))
     , m_storeFileLoggerAgeType(FILELOGGER_SETTINGS_KEY(u"AgeType"_qs))
     , m_storeFileLoggerPath(FILELOGGER_SETTINGS_KEY(u"Path"_qs))
+    , m_storeFileLoggerCompressed(FILELOGGER_SETTINGS_KEY(u"Compressed"_qs))
     , m_storeMemoryWorkingSetLimit(SETTINGS_KEY(u"MemoryWorkingSetLimit"_qs))
 #ifdef Q_OS_WIN
     , m_processMemoryPriority(SETTINGS_KEY(u"ProcessMemoryPriority"_qs))
@@ -388,7 +389,9 @@ void Application::setFileLoggerEnabled(const bool value)
         m_fileLogger = new FileLogger(this);
     else if (!value)
         delete m_fileLogger;
-    m_storeFileLoggerEnabled = value;
+
+    if (isFileLoggerEnabled() != value)
+        m_storeFileLoggerEnabled = value;
 }
 
 Path Application::fileLoggerPath() const
@@ -398,9 +401,12 @@ Path Application::fileLoggerPath() const
 
 void Application::setFileLoggerPath(const Path &path)
 {
-    if (m_fileLogger)
-        m_fileLogger->changePath(path);
-    m_storeFileLoggerPath = path;
+    if (fileLoggerPath() != path)
+    {
+        if (m_fileLogger)
+            m_fileLogger->changePath(path);
+        m_storeFileLoggerPath = path;
+    }
 }
 
 bool Application::isFileLoggerBackup() const
@@ -410,7 +416,8 @@ bool Application::isFileLoggerBackup() const
 
 void Application::setFileLoggerBackup(const bool value)
 {
-    m_storeFileLoggerBackup = value;
+    if (isFileLoggerBackup() != value)
+        m_storeFileLoggerBackup = value;
 }
 
 bool Application::isFileLoggerDeleteOld() const
@@ -420,9 +427,8 @@ bool Application::isFileLoggerDeleteOld() const
 
 void Application::setFileLoggerDeleteOld(const bool value)
 {
-    if (value && m_fileLogger)
-        m_fileLogger->deleteOld(fileLoggerAge(), static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType()));
-    m_storeFileLoggerDeleteOld = value;
+    if (isFileLoggerDeleteOld() != value)
+        m_storeFileLoggerDeleteOld = value;
 }
 
 int Application::fileLoggerMaxSize() const
@@ -434,7 +440,8 @@ int Application::fileLoggerMaxSize() const
 void Application::setFileLoggerMaxSize(const int bytes)
 {
     const int clampedValue = std::min(std::max(bytes, MIN_FILELOG_SIZE), MAX_FILELOG_SIZE);
-    m_storeFileLoggerMaxSize = clampedValue;
+    if (fileLoggerMaxSize() != clampedValue)
+        m_storeFileLoggerMaxSize = clampedValue;
 }
 
 int Application::fileLoggerAge() const
@@ -445,7 +452,9 @@ int Application::fileLoggerAge() const
 
 void Application::setFileLoggerAge(const int value)
 {
-    m_storeFileLoggerAge = std::min(std::max(value, 1), 365);
+    const int clampedValue = std::min(std::max(value, 1), 365);
+    if (fileLoggerAge() != clampedValue)
+        m_storeFileLoggerAge = clampedValue;
 }
 
 int Application::fileLoggerAgeType() const
@@ -456,7 +465,20 @@ int Application::fileLoggerAgeType() const
 
 void Application::setFileLoggerAgeType(const int value)
 {
-    m_storeFileLoggerAgeType = ((value < 0) || (value > 2)) ? 1 : value;
+    const int clampedValue = ((value < 0) || (value > 2)) ? 1 : value;
+    if (fileLoggerAgeType() != clampedValue)
+        m_storeFileLoggerAgeType = clampedValue;
+}
+
+bool Application::isFileLoggerCompressed() const
+{
+    return m_storeFileLoggerCompressed.get(false);
+}
+
+void Application::setFileLoggerCompressed(bool value)
+{
+    if (isFileLoggerCompressed() != value)
+        m_storeFileLoggerCompressed = value;
 }
 
 void Application::processMessage(const QString &message)

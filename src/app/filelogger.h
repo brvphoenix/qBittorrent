@@ -57,13 +57,14 @@ public:
     ~FileLogger() override;
 
     void changePath(const Path &newPath);
-    void deleteOld(const int age, const int ageType);
 
 private slots:
     void addLogMessage(const Log::Msg &msg);
     void flushLog();
 
 private:
+    void makeBackup();
+    void sortBackup(const int startAt = 1) const;
     void openLogFile();
     void closeLogFile();
 

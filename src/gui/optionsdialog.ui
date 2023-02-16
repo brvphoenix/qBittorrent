@@ -725,6 +725,13 @@
                  </item>
                 </layout>
                </item>
+               <item>
+                <widget class="QCheckBox" name="checkFileLogCompressed">
+                 <property name="text">
+                  <string>Compress log files when backing up</string>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>

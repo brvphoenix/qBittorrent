@@ -312,6 +312,7 @@ void OptionsDialog::loadBehaviorTabOptions()
     m_ui->spinFileLogSize->setValue(app()->fileLoggerMaxSize() / 1024);
     m_ui->spinFileLogAge->setValue(app()->fileLoggerAge());
     m_ui->comboFileLogAgeType->setCurrentIndex(app()->fileLoggerAgeType());
+    m_ui->checkFileLogCompressed->setChecked(app()->isFileLoggerCompressed());
 
     m_ui->checkBoxPerformanceWarning->setChecked(session->isPerformanceWarningEnabled());
 
@@ -367,6 +368,7 @@ void OptionsDialog::loadBehaviorTabOptions()
     connect(m_ui->spinFileLogSize, qSpinBoxValueChanged, this, &ThisType::enableApplyButton);
     connect(m_ui->spinFileLogAge, qSpinBoxValueChanged, this, &ThisType::enableApplyButton);
     connect(m_ui->comboFileLogAgeType, qComboBoxCurrentIndexChanged, this, &ThisType::enableApplyButton);
+    connect(m_ui->checkFileLogCompressed, &QAbstractButton::toggled, this, &ThisType::enableApplyButton);
 
     connect(m_ui->checkBoxPerformanceWarning, &QAbstractButton::toggled, this, &ThisType::enableApplyButton);
 }
@@ -450,6 +452,7 @@ void OptionsDialog::saveBehaviorTabOptions() const
     app()->setFileLoggerAgeType(m_ui->comboFileLogAgeType->currentIndex());
     app()->setFileLoggerDeleteOld(m_ui->checkFileLogDelete->isChecked());
     app()->setFileLoggerEnabled(m_ui->checkFileLog->isChecked());
+    app()->setFileLoggerCompressed(m_ui->checkFileLogCompressed->isChecked());
 
     app()->setStartUpWindowState(m_ui->windowStateComboBox->currentData().value<WindowState>());
 
