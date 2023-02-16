@@ -29,6 +29,8 @@
 
 #include "gzip.h"
 
+#include <array>
+
 #include <QtGlobal>
 #include <QBuffer>
 #include <QByteArray>
@@ -39,17 +41,17 @@
 #endif
 #include <zlib.h>
 
+#define CHUNK_SIZE 128 * 1024
+
 bool Utils::Gzip::compress(QIODevice &source, QIODevice &dest, const int level)
 {
-    const unsigned int chunkSize = 128 * 1024;
-
     z_stream strm {};
     strm.zalloc = Z_NULL;
     strm.zfree = Z_NULL;
     strm.opaque = Z_NULL;
 
-    char *in = new char[chunkSize];
-    char *out = new char[chunkSize];
+    std::array<char, CHUNK_SIZE> in;
+    std::array<char, CHUNK_SIZE> out;
 
     // windowBits = 15 + 16 to enable gzip
     // From the zlib manual: windowBits can also be greater than 15 for optional gzip encoding. Add 16 to windowBits
@@ -58,30 +60,30 @@ bool Utils::Gzip::compress(QIODevice &source, QIODevice &dest, const int level)
     if (ret != Z_OK)
         return false;
 
-    int flush;
+    int flush = Z_NO_FLUSH;
     do
     {
-        const qsizetype readBytes = source.read(in, chunkSize);
+        const qsizetype readBytes = source.read(in.data(), CHUNK_SIZE);
         if (readBytes == -1)
         {
             deflateEnd(&strm);
             return false;
         }
 
-        flush = (source.atEnd()) ? Z_FINISH : Z_NO_FLUSH;
+        flush = source.atEnd() ? Z_FINISH : Z_NO_FLUSH;
         strm.avail_in = readBytes;
-        strm.next_in = reinterpret_cast<const Bytef *>(in);
+        strm.next_in = reinterpret_cast<const Bytef *>(in.data());
 
         do
         {
-            strm.avail_out = chunkSize;
-            strm.next_out = reinterpret_cast<Bytef *>(out);
+            strm.avail_out = CHUNK_SIZE;
+            strm.next_out = reinterpret_cast<Bytef *>(out.data());
 
             ret = deflate(&strm, flush);
             Q_ASSERT(ret != Z_STREAM_ERROR);
 
-            const qsizetype have = chunkSize - strm.avail_out;
-            if (dest.write(out, have) == -1)
+            const qsizetype have = CHUNK_SIZE - strm.avail_out;
+            if (dest.write(out.data(), have) == -1)
             {
                 deflateEnd(&strm);
                 return false;
@@ -141,8 +143,6 @@ QByteArray Utils::Gzip::compress(const QByteArray &data, const int level, bool *
 
 bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
 {
-    const unsigned int chunkSize = 128 * 1024;
-
     z_stream strm {};
     strm.zalloc = Z_NULL;
     strm.zfree = Z_NULL;
@@ -150,8 +150,8 @@ bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
     strm.avail_in = 0;
     strm.next_in = Z_NULL;
 
-    char *in = new char[chunkSize];
-    char *out = new char[chunkSize];
+    std::array<char, CHUNK_SIZE> in;
+    std::array<char, CHUNK_SIZE> out;
 
     // windowBits must be greater than or equal to the windowBits value provided to deflateInit2() while compressing
     // Add 32 to windowBits to enable zlib and gzip decoding with automatic header detection
@@ -161,7 +161,7 @@ bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
 
     do
     {
-        const qsizetype readBytes = source.read(in, chunkSize);
+        const qsizetype readBytes = source.read(in.data(), CHUNK_SIZE);
         if (readBytes == -1)
         {
             inflateEnd(&strm);
@@ -174,12 +174,12 @@ bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
         }
 
         strm.avail_in = readBytes;
-        strm.next_in = reinterpret_cast<const Bytef *>(in);
+        strm.next_in = reinterpret_cast<const Bytef *>(in.data());
 
         do
         {
-            strm.avail_out = chunkSize;
-            strm.next_out = reinterpret_cast<Bytef *>(out);
+            strm.avail_out = CHUNK_SIZE;
+            strm.next_out = reinterpret_cast<Bytef *>(out.data());
 
             ret = inflate(&strm, Z_NO_FLUSH);
             Q_ASSERT(ret != Z_STREAM_ERROR);
@@ -195,8 +195,8 @@ bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
                 return false;
             }
 
-            const qsizetype have = chunkSize - strm.avail_out;
-            if (dest.write(out, have) == -1)
+            const qsizetype have = CHUNK_SIZE - strm.avail_out;
+            if (dest.write(out.data(), have) == -1)
             {
                 inflateEnd(&strm);
                 return false;
