@@ -30,6 +30,7 @@
 
 #include <chrono>
 
+#include <QDataStream>
 #include <QDateTime>
 #include <QDir>
 #include <QHash>
@@ -63,6 +64,8 @@ namespace
 
     bool compressWrapper(const Path &before, const Path &after, int level, QString &msg)
     {
+        const qsizetype chunkSize = 512 * 1024; // Bytes
+
         QFileInfo info(before.data());
         const QDateTime atime = info.lastRead();
         const QDateTime mtime = info.lastModified();
@@ -76,34 +79,51 @@ namespace
             msg = QObject::tr("Can't open %1!").arg(before.data());
             return false;
         }
+        QDataStream in(&source);
 
-        bool ok = false;
-        const QByteArray data = Utils::Gzip::compress(source.readAll(), level, &ok);
-
-        if(ok)
+        QFile dest(after.data());
+        if (!dest.open(QIODevice::WriteOnly | QIODevice::NewOnly))
         {
-            QFile dest(after.data());
-            if (!dest.open(QFile::WriteOnly) || (dest.write(data) == -1))
+            msg = QObject::tr("Can't open %1!").arg(after.data());
+            return false;
+        }
+        QDataStream out(&dest);
+
+        bool ok = true;
+        while (in.status() == QDataStream::Ok && ok)
+        {
+            QByteArray buffer(chunkSize, 0);
+            qsizetype bytes = in.readRawData(buffer.data(), chunkSize);
+            if (in.atEnd())
+                buffer.truncate(bytes);
+            const QByteArray data = Utils::Gzip::compress(buffer, level, &ok);
+
+            if (!ok)
+                msg = QObject::tr("Can't compress %1!").arg(before.data());
+
+            if (out.writeRawData(data.data(), data.size()) == -1)
             {
-                msg = QObject::tr("Couldn't save to %1.").arg(after.data());
+                msg = QObject::tr("Can't save to %1!").arg(after.data());
                 ok = false;
             }
-            dest.close();
+        }
 
-            if (ok)
-            {
-                // Change the file's timestamp.
-                dest.open(QIODevice::ReadOnly);
-                dest.setFileTime(atime, QFileDevice::FileAccessTime);
-                dest.setFileTime(mtime, QFileDevice::FileModificationTime);
-                dest.setFileTime(ctime, QFileDevice::FileBirthTime);
-                dest.setFileTime(mctime, QFileDevice::FileMetadataChangeTime);
-                dest.close();
-            }
-            else
-            {
-                Utils::Fs::removeFile(after);
-            }
+        source.close();
+        dest.close();
+
+        if (ok)
+        {
+            // Change the file's timestamp.
+            dest.open(QIODevice::ReadOnly);
+            dest.setFileTime(atime, QFileDevice::FileAccessTime);
+            dest.setFileTime(mtime, QFileDevice::FileModificationTime);
+            dest.setFileTime(ctime, QFileDevice::FileBirthTime);
+            dest.setFileTime(mctime, QFileDevice::FileMetadataChangeTime);
+            dest.close();
+        }
+        else
+        {
+            Utils::Fs::removeFile(after);
         }
         return ok;
     }
