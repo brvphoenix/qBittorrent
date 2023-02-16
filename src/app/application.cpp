@@ -305,7 +305,7 @@ Application::Application(int &argc, char **argv)
     }
 
     if (isFileLoggerEnabled())
-        m_fileLogger = new FileLogger(fileLoggerPath(), isFileLoggerBackup(), fileLoggerMaxSize(), isFileLoggerDeleteOld(), fileLoggerAge(), static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType()));
+        m_fileLogger = new FileLogger(this);
 
     if (m_commandLineArgs.webUiPort > 0) // it will be -1 when user did not set any value
         Preferences::instance()->setWebUiPort(m_commandLineArgs.webUiPort);
@@ -385,7 +385,7 @@ bool Application::isFileLoggerEnabled() const
 void Application::setFileLoggerEnabled(const bool value)
 {
     if (value && !m_fileLogger)
-        m_fileLogger = new FileLogger(fileLoggerPath(), isFileLoggerBackup(), fileLoggerMaxSize(), isFileLoggerDeleteOld(), fileLoggerAge(), static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType()));
+        m_fileLogger = new FileLogger(this);
     else if (!value)
         delete m_fileLogger;
     m_storeFileLoggerEnabled = value;
@@ -410,8 +410,6 @@ bool Application::isFileLoggerBackup() const
 
 void Application::setFileLoggerBackup(const bool value)
 {
-    if (m_fileLogger)
-        m_fileLogger->setBackup(value);
     m_storeFileLoggerBackup = value;
 }
 
@@ -436,8 +434,6 @@ int Application::fileLoggerMaxSize() const
 void Application::setFileLoggerMaxSize(const int bytes)
 {
     const int clampedValue = std::min(std::max(bytes, MIN_FILELOG_SIZE), MAX_FILELOG_SIZE);
-    if (m_fileLogger)
-        m_fileLogger->setMaxSize(clampedValue);
     m_storeFileLoggerMaxSize = clampedValue;
 }
 
@@ -1256,7 +1252,6 @@ void Application::cleanup()
     Net::DownloadManager::freeInstance();
     Net::ProxyConfigurationManager::freeInstance();
     Preferences::freeInstance();
-    SettingsStorage::freeInstance();
     IconProvider::freeInstance();
     SearchPluginManager::freeInstance();
     Utils::Fs::removeDirRecursively(Utils::Fs::tempPath());
@@ -1264,6 +1259,8 @@ void Application::cleanup()
     LogMsg(tr("qBittorrent is now ready to exit"));
     Logger::freeInstance();
     delete m_fileLogger;
+
+    SettingsStorage::freeInstance();
 
 #ifndef DISABLE_GUI
     if (m_window)

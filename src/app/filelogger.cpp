@@ -44,19 +44,16 @@ namespace
     const std::chrono::seconds FLUSH_INTERVAL {2};
 }
 
-FileLogger::FileLogger(const Path &path, const bool backup
-                       , const int maxSize, const bool deleteOld, const int age
-                       , const FileLogAgeType ageType)
-    : m_backup(backup)
-    , m_maxSize(maxSize)
+FileLogger::FileLogger(IApplication *IApp)
+    : ApplicationComponent(IApp)
 {
     m_flusher.setInterval(FLUSH_INTERVAL);
     m_flusher.setSingleShot(true);
     connect(&m_flusher, &QTimer::timeout, this, &FileLogger::flushLog);
 
-    changePath(path);
-    if (deleteOld)
-        this->deleteOld(age, ageType);
+    changePath(IApp->fileLoggerPath());
+    if (IApp->isFileLoggerDeleteOld())
+        this->deleteOld(IApp->fileLoggerAge(), IApp->fileLoggerAgeType());
 
     const Logger *const logger = Logger::instance();
     for (const Log::Msg &msg : asConst(logger->getMessages()))
@@ -85,7 +82,7 @@ void FileLogger::changePath(const Path &newPath)
     openLogFile();
 }
 
-void FileLogger::deleteOld(const int age, const FileLogAgeType ageType)
+void FileLogger::deleteOld(const int age, const int ageType)
 {
     const QDateTime date = QDateTime::currentDateTime();
     const QDir dir {m_path.parentPath().data()};
@@ -95,7 +92,7 @@ void FileLogger::deleteOld(const int age, const FileLogAgeType ageType)
     for (const QFileInfo &file : fileList)
     {
         QDateTime modificationDate = file.lastModified();
-        switch (ageType)
+        switch (static_cast<FileLogAgeType>(ageType))
         {
         case DAYS:
             modificationDate = modificationDate.addDays(age);
@@ -110,16 +107,6 @@ void FileLogger::deleteOld(const int age, const FileLogAgeType ageType)
             break;
         Utils::Fs::removeFile(Path(file.absoluteFilePath()));
     }
-}
-
-void FileLogger::setBackup(const bool value)
-{
-    m_backup = value;
-}
-
-void FileLogger::setMaxSize(const int value)
-{
-    m_maxSize = value;
 }
 
 void FileLogger::addLogMessage(const Log::Msg &msg)
@@ -148,7 +135,7 @@ void FileLogger::addLogMessage(const Log::Msg &msg)
 
     stream << QDateTime::fromSecsSinceEpoch(msg.timestamp).toString(Qt::ISODate) << QStringView(u" - ") << msg.message << QChar(u'\n');
 
-    if (m_backup && (m_logFile.size() >= m_maxSize))
+    if (app()->isFileLoggerBackup() && (m_logFile.size() >= app()->fileLoggerMaxSize()))
     {
         closeLogFile();
         int counter = 0;
