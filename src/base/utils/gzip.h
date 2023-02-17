@@ -30,9 +30,11 @@
 #pragma once
 
 class QByteArray;
+class QDataStream;
 
 namespace Utils::Gzip
 {
+    bool compress(QDataStream &source, QDataStream &dest, int level = 6);
     QByteArray compress(const QByteArray &data, int level = 6, bool *ok = nullptr);
     QByteArray decompress(const QByteArray &data, bool *ok = nullptr);
 }

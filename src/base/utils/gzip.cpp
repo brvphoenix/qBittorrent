@@ -31,12 +31,70 @@
 
 #include <vector>
 
+#include <QtGlobal>
 #include <QByteArray>
+#include <QDataStream>
+#include <QIODevice>
 
 #ifndef ZLIB_CONST
 #define ZLIB_CONST  // make z_stream.next_in const
 #endif
 #include <zlib.h>
+
+bool Utils::Gzip::compress(QDataStream &source, QDataStream &dest, int level)
+{
+    const int chunkSize = 128 * 1024;
+
+    z_stream strm {};
+    strm.zalloc = Z_NULL;
+    strm.zfree = Z_NULL;
+    strm.opaque = Z_NULL;
+
+    QByteArray in(chunkSize, Qt::Uninitialized);
+    QByteArray out(chunkSize, Qt::Uninitialized);
+
+    // windowBits = 15 + 16 to enable gzip
+    // From the zlib manual: windowBits can also be greater than 15 for optional gzip encoding. Add 16 to windowBits
+    // to write a simple gzip header and trailer around the compressed data instead of a zlib wrapper.
+    int ret = deflateInit2(&strm, level, Z_DEFLATED, (15 + 16), 9, Z_DEFAULT_STRATEGY);
+    if (ret != Z_OK)
+        return false;
+
+    int flush;
+    do
+    {
+        const qsizetype readBytes = source.readRawData(in.data(), chunkSize);
+        if (readBytes == -1)
+        {
+            deflateEnd(&strm);
+            return false;
+        }
+        flush = (source.status() == QDataStream::ReadPastEnd) ? Z_FINISH : Z_NO_FLUSH;
+        strm.avail_in = readBytes;
+        strm.next_in = reinterpret_cast<const Bytef *>(in.constData());
+
+        do
+        {
+            strm.avail_out = chunkSize;
+            strm.next_out = reinterpret_cast<Bytef *>(out.data());
+
+            ret = deflate(&strm, flush);
+            Q_ASSERT(ret != Z_STREAM_ERROR);
+
+            const qsizetype have = chunkSize - strm.avail_out;
+            if (dest.writeRawData(out.constData(), have) == -1 || dest.status() == QDataStream::WriteFailed)
+            {
+                deflateEnd(&strm);
+                return false;
+            }
+        } while (strm.avail_out == 0);
+        Q_ASSERT(strm.avail_in == 0);
+    } while (flush != Z_FINISH);
+    Q_ASSERT(ret == Z_STREAM_END);
+
+    deflateEnd(&strm);
+    return true;
+}
 
 QByteArray Utils::Gzip::compress(const QByteArray &data, const int level, bool *ok)
 {
@@ -45,57 +103,13 @@ QByteArray Utils::Gzip::compress(const QByteArray &data, const int level, bool *
     if (data.isEmpty())
         return {};
 
-    const int BUFSIZE = 128 * 1024;
-    std::vector<char> tmpBuf(BUFSIZE);
-
-    z_stream strm {};
-    strm.zalloc = Z_NULL;
-    strm.zfree = Z_NULL;
-    strm.opaque = Z_NULL;
-    strm.next_in = reinterpret_cast<const Bytef *>(data.constData());
-    strm.avail_in = uInt(data.size());
-    strm.next_out = reinterpret_cast<Bytef *>(tmpBuf.data());
-    strm.avail_out = BUFSIZE;
-
-    // windowBits = 15 + 16 to enable gzip
-    // From the zlib manual: windowBits can also be greater than 15 for optional gzip encoding. Add 16 to windowBits
-    // to write a simple gzip header and trailer around the compressed data instead of a zlib wrapper.
-    int result = deflateInit2(&strm, level, Z_DEFLATED, (15 + 16), 9, Z_DEFAULT_STRATEGY);
-    if (result != Z_OK)
-        return {};
-
     QByteArray output;
-    output.reserve(deflateBound(&strm, data.size()));
+    output.reserve(data.size());
+    QDataStream source(data);
+    QDataStream dest(&output, QIODevice::WriteOnly);
 
-    // feed to deflate
-    while (strm.avail_in > 0)
-    {
-        result = deflate(&strm, Z_NO_FLUSH);
-
-        if (result != Z_OK)
-        {
-            deflateEnd(&strm);
-            return {};
-        }
-
-        output.append(tmpBuf.data(), (BUFSIZE - strm.avail_out));
-        strm.next_out = reinterpret_cast<Bytef *>(tmpBuf.data());
-        strm.avail_out = BUFSIZE;
-    }
-
-    // flush the rest from deflate
-    while (result != Z_STREAM_END)
-    {
-        result = deflate(&strm, Z_FINISH);
-
-        output.append(tmpBuf.data(), (BUFSIZE - strm.avail_out));
-        strm.next_out = reinterpret_cast<Bytef *>(tmpBuf.data());
-        strm.avail_out = BUFSIZE;
-    }
-
-    deflateEnd(&strm);
-
-    if (ok) *ok = true;
+    if (ok)
+        *ok = Utils::Gzip::compress(source, dest, level);
     return output;
 }
 

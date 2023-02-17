@@ -64,8 +64,6 @@ namespace
 
     bool compressWrapper(const Path &before, const Path &after, int level, QString &msg)
     {
-        const qsizetype chunkSize = 512 * 1024; // Bytes
-
         QFileInfo info(before.data());
         const QDateTime atime = info.lastRead();
         const QDateTime mtime = info.lastModified();
@@ -89,25 +87,7 @@ namespace
         }
         QDataStream out(&dest);
 
-        bool ok = true;
-        while (in.status() == QDataStream::Ok && ok)
-        {
-            QByteArray buffer(chunkSize, 0);
-            qsizetype bytes = in.readRawData(buffer.data(), chunkSize);
-            if (in.atEnd())
-                buffer.truncate(bytes);
-            const QByteArray data = Utils::Gzip::compress(buffer, level, &ok);
-
-            if (!ok)
-                msg = QObject::tr("Can't compress %1!").arg(before.data());
-
-            if (out.writeRawData(data.data(), data.size()) == -1)
-            {
-                msg = QObject::tr("Can't save to %1!").arg(after.data());
-                ok = false;
-            }
-        }
-
+        const bool ok = Utils::Gzip::compress(in, out, level);
         source.close();
         dest.close();
 
