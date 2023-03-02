@@ -41,59 +41,68 @@
 #endif
 #include <zlib.h>
 
-bool Utils::Gzip::compress(QDataStream &source, QDataStream &dest, int level)
+bool initDeflate(z_stream *strm, int level)
 {
-    const int chunkSize = 128 * 1024;
-
-    z_stream strm {};
-    strm.zalloc = Z_NULL;
-    strm.zfree = Z_NULL;
-    strm.opaque = Z_NULL;
-
-    QByteArray in(chunkSize, Qt::Uninitialized);
-    QByteArray out(chunkSize, Qt::Uninitialized);
+    strm->zalloc = Z_NULL;
+    strm->zfree = Z_NULL;
+    strm->opaque = Z_NULL;
 
     // windowBits = 15 + 16 to enable gzip
     // From the zlib manual: windowBits can also be greater than 15 for optional gzip encoding. Add 16 to windowBits
     // to write a simple gzip header and trailer around the compressed data instead of a zlib wrapper.
-    int ret = deflateInit2(&strm, level, Z_DEFLATED, (15 + 16), 9, Z_DEFAULT_STRATEGY);
-    if (ret != Z_OK)
-        return false;
+    int ret = deflateInit2(strm, level, Z_DEFLATED, (15 + 16), 9, Z_DEFAULT_STRATEGY);
+    return ret == Z_OK;
+}
 
-    int flush;
+bool compress(z_stream *strm, QDataStream &source, QDataStream &dest)
+{
+    const int chunkSize = 128 * 1024;
+
+    QByteArray in(chunkSize, Qt::Uninitialized);
+    QByteArray out(chunkSize, Qt::Uninitialized);
+    int flush, ret;
     do
     {
         const qsizetype readBytes = source.readRawData(in.data(), chunkSize);
         if (readBytes == -1)
         {
-            deflateEnd(&strm);
+            deflateEnd(strm);
             return false;
         }
         flush = (source.status() == QDataStream::ReadPastEnd) ? Z_FINISH : Z_NO_FLUSH;
-        strm.avail_in = readBytes;
-        strm.next_in = reinterpret_cast<const Bytef *>(in.constData());
+        strm->avail_in = readBytes;
+        strm->next_in = reinterpret_cast<const Bytef *>(in.constData());
 
         do
         {
-            strm.avail_out = chunkSize;
-            strm.next_out = reinterpret_cast<Bytef *>(out.data());
+            strm->avail_out = chunkSize;
+            strm->next_out = reinterpret_cast<Bytef *>(out.data());
 
-            ret = deflate(&strm, flush);
+            ret = deflate(strm, flush);
             Q_ASSERT(ret != Z_STREAM_ERROR);
 
-            const qsizetype have = chunkSize - strm.avail_out;
+            const qsizetype have = chunkSize - strm->avail_out;
             if (dest.writeRawData(out.constData(), have) == -1 || dest.status() == QDataStream::WriteFailed)
             {
-                deflateEnd(&strm);
+                deflateEnd(strm);
                 return false;
             }
-        } while (strm.avail_out == 0);
-        Q_ASSERT(strm.avail_in == 0);
+        } while (strm->avail_out == 0);
+        Q_ASSERT(strm->avail_in == 0);
     } while (flush != Z_FINISH);
     Q_ASSERT(ret == Z_STREAM_END);
 
-    deflateEnd(&strm);
+    deflateEnd(strm);
     return true;
+}
+
+bool Utils::Gzip::compress(QDataStream &source, QDataStream &dest, int level)
+{
+    z_stream strm {};
+    if (!initDeflate(&strm, level))
+        return {};
+
+    return compress(&strm, source, dest);
 }
 
 QByteArray Utils::Gzip::compress(const QByteArray &data, const int level, bool *ok)
@@ -103,13 +112,17 @@ QByteArray Utils::Gzip::compress(const QByteArray &data, const int level, bool *
     if (data.isEmpty())
         return {};
 
+    z_stream strm {};
+    if (!initDeflate(&strm, level))
+        return {};
+
     QByteArray output;
-    output.reserve(data.size());
+    output.reserve(deflateBound(&strm, data.size()));
     QDataStream source(data);
     QDataStream dest(&output, QIODevice::WriteOnly);
 
     if (ok)
-        *ok = Utils::Gzip::compress(source, dest, level);
+        *ok = compress(&strm, source, dest);
     return output;
 }
 
