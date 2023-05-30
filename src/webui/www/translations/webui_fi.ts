@@ -611,6 +611,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Haluatko keskeyttää kaikki torrentit?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Suoritusloki</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation type="unfinished"/>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3653,6 +3661,141 @@ Nämä muodot ovat tuetut: S01E01, 1x1, 2017.12.31 ja 31.12.2017 (päiväysmuodo
     <message>
         <source>Unread</source>
         <translation>Lukematon</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Yleiset</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Tuntematon</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Kaikki</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopioi</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Valitse kaikki</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Tyhjennä</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Varoitus</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Tiedotusviestit</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Varoitusviestit</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Estetyt IP-osoitteet</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Tila</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Viesti</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>item</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Normaalit viestit</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Kriittiset viestit</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normaali</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Tulokset</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

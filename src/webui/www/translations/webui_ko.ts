@@ -611,6 +611,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>모든 토렌트를 일시 정지하시겠습니까?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>실행 로그</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>로그</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3657,6 +3665,141 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Unread</source>
         <translation>읽지 않음</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>일반</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>차단됨</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>알 수 없음</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>모두</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>보여주기</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>복사하기</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>모두 선택하기</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>로그 유형</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>지우기</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>경고</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>정보 메시지</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>경고 메시지</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>필터 로그</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>차단된 IP</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>벗어남</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>상태</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>타임스탬프</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>모두 지우기</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>메시지</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>로그 레벨:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>원인</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>항목</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>금지됨</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>일반 메시지</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>중요</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>중요 메시지</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>정상</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>항목들</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>결과</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>정보</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>로그 레벨 선정하기...</translation>
     </message>
 </context>
 </TS>

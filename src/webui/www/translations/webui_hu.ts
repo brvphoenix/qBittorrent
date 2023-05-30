@@ -611,6 +611,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Szünetelteti az összes torrentet?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Napló</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Napló</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3657,6 +3665,141 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     <message>
         <source>Unread</source>
         <translation>Olvasatlan</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Általános</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Tiltott</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Ismeretlen</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Összes</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>megjelenítve</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Másolás</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Összes kiválasztása</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Napló típusa</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Törlés</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Figyelmeztetés</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Információs üzenetek</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Figyelmeztető üzenetek</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Napló szűrése</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Tiltott IP címek</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>/</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Állapot</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Időbélyeg</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Összes törlése</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Üzenet</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Naplózási szintek:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Indok</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>elem</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Kitiltva</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Normál üzenetek</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Kritikus</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Kritikus üzenetek</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normál</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>elem</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Találatok</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Válasszon naplózási szintet...</translation>
     </message>
 </context>
 </TS>

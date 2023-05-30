@@ -612,6 +612,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Бихте ли искали да поставите на пауза всички торенти?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Изпълнение на Запис</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation type="unfinished"/>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3654,6 +3662,141 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Unread</source>
         <translation>Непрочетен</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Общи</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Неизвестен</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Всички</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>показване</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Копирай</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation> Избери всички</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Изчистване</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Предупреждение</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Информационни Съобщения</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Предупредителни Съобщения</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Блокирани IP-та</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>от</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Състояние</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Съобщение</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>item</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Нормални Съобщения</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Критични Съобщения</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Нормален</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Резултати</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

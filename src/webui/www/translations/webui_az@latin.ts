@@ -611,6 +611,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Bütün torrenlərə fasilə verilsin?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>İcra jurnalı</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Jurnal</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3657,6 +3665,141 @@ Bu formatlar dəstəklənir: S01E01, 1x1, 2017.12.31 və 31.12.2017 (Həmçinin 
     <message>
         <source>Unread</source>
         <translation>Oxunmamış</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Əsas</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Əngəllənmiş</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Naməlum</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Hamısı</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>göstərərək</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopyalayın</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Hamısını seçin</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Jurnalın növü</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Təmizləmək</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Xəbərdarlıq</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Məlumat bildirişləri</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Xəbərdarlıq bildirişlər</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Jurnalı süzgəclə</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Əngələnmiş İP-lər</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>kənarnda</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Vəziyyəti</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Vaxt möhürü</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Hamısını təmizlə</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>İsmarıc</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Jurnallama səviyyələri:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Səbəb:</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>element</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Qadağan olunmuş</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Adi ismarıclar</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Ciddi</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Ciddi ismarıclar</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normal</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>elementlər</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Nəticələr</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Məlumat</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Jurnallama səviyyəsini seçin...</translation>
     </message>
 </context>
 </TS>

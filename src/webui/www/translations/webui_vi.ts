@@ -611,6 +611,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Bạn có muốn tạm dừng tất cả các torrent?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Nhật Ký Thực Thi</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Nhật ký</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3657,6 +3665,141 @@ Hỗ trợ định dạng: S01E01, 1x1, 2017.12.31 và 31.12.2017 (Hỗ trợ đ
     <message>
         <source>Unread</source>
         <translation>Chưa đọc</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Tổng quan</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Bị chặn</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Không rõ</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Tất cả</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>hiển thị</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Sao chép</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Chọn Tất Cả</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Loại Nhật Ký</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Làm sạch</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Cảnh báo</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Thông Báo Thông Tin</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Thông Báo Cảnh Báo</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Lọc nhật ký</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>IP bị chặn</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Trạng thái</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Dấu thời gian</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Làm Sạch Tất Cả</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Thông báo</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Cấp Độ Nhật Ký:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Lý do</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>mục</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Bị cấm</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Thông báo Bình thường</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Thông Báo Quan Trọng</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Bình thường</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>mục</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Kết quả</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Thông tin</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Chọn cấp độ nhật ký...</translation>
     </message>
 </context>
 </TS>

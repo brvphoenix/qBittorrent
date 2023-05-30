@@ -611,6 +611,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Хочете призупинити всі торренти?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Журнал виконання</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Журнал</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3657,6 +3665,141 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Unread</source>
         <translation>Непрочитані</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Загальний</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Заблокований</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Невідомий</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Всі</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>показ</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Копіювати</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Вибрати Все</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Файл журналу</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Очистити</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Попередження</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Інформаційні повідомлення</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Попереджувальні повідомлення</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Фільтр журналів</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Заблоковані IP</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>із</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Статус</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Мітка часу</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Очистити все</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Повідомлення</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Рівні журналу:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Причина</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>елемент</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>заблокований</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Звичайні Повідомлення</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Критичний</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Критичні Повідомлення</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Нормальний</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>елементи</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Результати</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Інформація</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Виберіть рівень журналу...</translation>
     </message>
 </context>
 </TS>

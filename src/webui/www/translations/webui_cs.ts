@@ -611,6 +611,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Přejete si pozastavit všechny torrenty?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Záznamy programu (Log)</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Log</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3657,6 +3665,141 @@ Podporuje formáty: S01E01, 1x1, 2017.12.31 a 31.12.2017 (Formáty dat také pod
     <message>
         <source>Unread</source>
         <translation>Nepřečtené</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Obecné</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Zablokováno</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Neznámá</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Vše</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>zobrazeno</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopírovat</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Vybrat vše</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Typ logu</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Vymazat</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Varování</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Informační sdělení</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Varovná sdělení</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Filtrování logů</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Blokované IP</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>mimo</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Stav</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Časové razítko</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Vyčistit vše</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Zpráva</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Úrovně logu:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Důvod</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>položka</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Nedovolený</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Normální sdělení</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Kritický</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Kritická sdělení</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normální</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>položky</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Výsledky</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Vyber úroveň logu:</translation>
     </message>
 </context>
 </TS>
