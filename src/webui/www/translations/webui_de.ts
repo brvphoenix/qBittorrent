@@ -3659,7 +3659,4 @@ Er unterstützt die Formate: S01E01, 1x1, 2017.12.31 und 31.12.2017 (Datums-Form
         <translation>Ungelesen</translation>
     </message>
 </context>
-<context>
-    <name>ExecutionLogWidget</name>
-    </context>
 </TS>

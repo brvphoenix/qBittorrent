@@ -3658,7 +3658,4 @@ Compatíbel cos formatos: S01E01, 1x1, 2017.12.31 e 31.12.2017 (os formatos da d
         <translation>Sen ler</translation>
     </message>
 </context>
-<context>
-    <name>ExecutionLogWidget</name>
-    </context>
 </TS>

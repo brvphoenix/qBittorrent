@@ -3656,7 +3656,4 @@ Les formats supportés : S01E01, 1x1, 2017.12.31 et 31.12.2017 (les formats date
         <translation>Non lu</translation>
     </message>
 </context>
-<context>
-    <name>ExecutionLogWidget</name>
-    </context>
 </TS>

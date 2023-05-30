@@ -3657,7 +3657,4 @@ Stöder formaten: S01E01, 1x1, 2017.12.31 och 31.12.2017 (datumformatet stöder 
         <translation>Oläst</translation>
     </message>
 </context>
-<context>
-    <name>ExecutionLogWidget</name>
-    </context>
 </TS>

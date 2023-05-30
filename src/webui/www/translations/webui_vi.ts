@@ -3657,7 +3657,4 @@ Hỗ trợ định dạng: S01E01, 1x1, 2017.12.31 và 31.12.2017 (Hỗ trợ đ
         <translation>Chưa đọc</translation>
     </message>
 </context>
-<context>
-    <name>ExecutionLogWidget</name>
-    </context>
 </TS>
