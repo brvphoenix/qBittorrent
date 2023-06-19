@@ -610,6 +610,14 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <source>Would you like to pause all torrents?</source>
         <translation>Voleu interrompre tots els torrents?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Registre d'execució</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Registre</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3656,6 +3664,141 @@ Admet els formats S01E01, 1x1, 2017.12.31 i 31.12.2017 (Els formats de data tamb
     <message>
         <source>Unread</source>
         <translation>No llegit</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>General</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Blocat</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Desconegut</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Tot</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>es mostren</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copia</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Selecciona-ho tot</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Tipus de registre</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Neteja</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Avís</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Missatges informatius</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Missatges d'advertència</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Filtra els registres</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>IP blocades</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>fora de</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Estat</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Segell de temps</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Neteja-ho tot</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Missatge</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Nivells de registre:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Raó</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>element</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Bandejat</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Missatges normals</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Crítics</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Missatges crítics</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normals</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>elements</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Resultats</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Informació</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Trieu un nivell de registre...</translation>
     </message>
 </context>
 </TS>

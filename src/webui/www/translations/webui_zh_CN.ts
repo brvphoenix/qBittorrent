@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>你要暂停所有的种子吗？</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>执行日志</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>日志</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3655,6 +3663,141 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Unread</source>
         <translation>未读</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>普通</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>被封禁</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>未知</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>全部</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>显示</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>复制</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>全选</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>日志类型</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>清空</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>警告</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>通知消息</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>警告信息</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>过滤日志</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>被封禁的 IP</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>中的</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>状态</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>时间戳</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>清除全部</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>消息</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>日志级别：</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>理由</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>项目</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>已封锁</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>一般消息</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>关键</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>严重信息</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>正常</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>项目</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>结果</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>信息</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>选择日志级别...</translation>
     </message>
 </context>
 </TS>

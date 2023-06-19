@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Doriți să întrerupeți toate torentele?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Jurnal de execuție</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Jurnal</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3651,6 +3659,141 @@ Recunoaște formatele: S01E01, 1x1, 2017.12.31 si 31.12.2017 (Formatele pentru d
     <message>
         <source>Unread</source>
         <translation>Necitite</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Generale</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Blocat</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Necunoscut</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Toate</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>se arată</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copiază</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Selectează tot</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>Id.</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Tip jurnal</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Curăță</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Avertisment</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Mesaje informative</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Mesaje de avertizare</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Adrese IP blocate</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>din</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Stare</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Mesaj</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>item</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Mesaje normale</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Mesaje critice</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normală</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Rezulatate</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation type="unfinished" />
     </message>
 </context>
 </TS>

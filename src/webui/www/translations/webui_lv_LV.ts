@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Vai vēlies apturēt visus torrentus?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Reģistrs</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Reģistrs</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3655,6 +3663,141 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     <message>
         <source>Unread</source>
         <translation>Neskatīti</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Vispārīgi</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Nezināms</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Visi</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>parādīti</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopēt</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Izvēlēties visus</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Notīrīt</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Uzmanību</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Informatīvi ziņojumi</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Brīdinājumu ziņojumi</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Bloķētās IP</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Stāvoklis</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Nodzēst visu</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Ziņojums</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>item</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Parasti ziņojumi</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Kritiski ziņojumi</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normāla</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Rezultāti</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation type="unfinished" />
     </message>
 </context>
 </TS>

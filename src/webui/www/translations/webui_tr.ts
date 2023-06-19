@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Tüm torrent&apos;leri duraklatmak ister misiniz?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Çalıştırma Günlüğü</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Günlük</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3655,6 +3663,141 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     <message>
         <source>Unread</source>
         <translation>Okunmadı</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Genel</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Engellenmiş</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Bilinmiyor</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Tümü</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>gösterilen</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopyala</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Tümünü Seç</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>Kimlik</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Günlük Türü</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Temizle</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Uyarı</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Bilgi İletileri</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Uyarı İletileri</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Günlükleri süz</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Engellenen IP'ler</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>/</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Durum</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Zaman Damgası</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Tümünü Temizle</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>İleti</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Günlük Seviyeleri:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Sebep</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>öğe</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Yasaklı</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Normal İletiler</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Önemli</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Önemli İletiler</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normal</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>öğe</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Sonuçlar</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Bilgi</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Bir günlük seviyesi seçin...</translation>
     </message>
 </context>
 </TS>

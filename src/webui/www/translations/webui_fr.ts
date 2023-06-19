@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Souhaitez-vous mettre en pause tous les torrents ?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Journal d'exécution</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Journal</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3654,6 +3662,141 @@ Les formats supportés : S01E01, 1x1, 2017.12.31 et 31.12.2017 (les formats date
     <message>
         <source>Unread</source>
         <translation>Non lu</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Général</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Bloquées</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Inconnue</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Toutes</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>affiche</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copier</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Tout sélectionner</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>Identifiant</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Type de journal</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Effacer</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Avertissement</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Messages d'information</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Messages d'avertissement</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Journaux des filtres</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>IPs bloquées</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>sur</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>États</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Horodatage</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Effacer tout</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Message</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Niveaux de journalisation :</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Raison</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>item</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Bannis</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Messages normaux</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Critiques</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Messages critiques</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normaux</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>items</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Résultats</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Choisissez un niveau de journalisation…</translation>
     </message>
 </context>
 </TS>

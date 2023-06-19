@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>すべてのTorrentを一時停止しますか？</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>実行ログ</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>ログ</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3655,6 +3663,141 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Unread</source>
         <translation>未読</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>全般</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>ブロック</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>不明</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>すべて</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>表示中</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>コピー</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>すべて選択</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>ログの種類</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>クリア</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>警告</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>情報メッセージ</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>警告メッセージ</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>ログをフィルター</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>ブロックされたIP</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>/</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>状態</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>タイムスタンプ</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>すべてクリア</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>メッセージ</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>ログレベル:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>理由</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>つ選択済み</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>アクセス禁止</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>通常メッセージ</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>緊急</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>緊急メッセージ</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>通常</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>つ選択済み</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>結果</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>情報</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>ログレベルを選択...</translation>
     </message>
 </context>
 </TS>

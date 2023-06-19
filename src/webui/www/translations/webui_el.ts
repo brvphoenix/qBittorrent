@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Θέλετε σίγουρα να θέσετε σε παύση όλα τα torrent;</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Καταγραφή Εκτέλεσης</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Αρχείο καταγραφής</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3655,6 +3663,141 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Unread</source>
         <translation>Μη αναγνωσμένα</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Γενικά</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Αποκλεισμένο</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Αγνωστο</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Όλα</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>εμφανίζονται</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Αντιγραφή</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Επιλογή Όλων</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Τύπος Αρχείου καταγραφής</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Καθαρισμός</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Προειδοποίηση</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Μηνύματα Πληροφοριών</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Μηνύματα Προειδοποίησης</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Φιλτράρισμα αρχείων καταγραφής</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Αποκλεισμένες IPs</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>από</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Κατάσταση</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Χρονική σήμανση</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Εκκαθάριση Ολων</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Μήνυμα</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Επίπεδα καταγραφής:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Αιτία</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>αντικείμενο</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Αποκλεισμένο</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Κανονικά Μηνύματα</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Κρίσιμο</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Κρίσιμα Μηνύματα</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Κανονική</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>αντικείμενα</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Αποτελέσματα</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Πληροφορίες</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Επιλέξτε ένα επίπεδο καταγραφής...</translation>
     </message>
 </context>
 </TS>

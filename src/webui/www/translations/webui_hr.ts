@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Želite li pauzirati sve torrente?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Dnevnik izvršavanja</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Zapis</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3654,6 +3662,141 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Unread</source>
         <translation>Nepročitano</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Općenito</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Blokirano</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Nije poznato</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Sve</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>pokazivanje</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopiraj</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Odaberi sve</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Vrsta zapisa</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Očisti</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Upozorenje</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Informacijske poruke</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Poruke upozorenja</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Filter zapisa</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Blokirane IP adrese</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>od</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Vremenska oznaka</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Očisti sve</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Poruka</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Razine zapisnika:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Razlog</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>stavka</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Banano</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Normalne poruke</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Kritično</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Kritične poruke</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normalno</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>stavke</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Rezultati</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Odaberite razinu zapisnika...</translation>
     </message>
 </context>
 </TS>

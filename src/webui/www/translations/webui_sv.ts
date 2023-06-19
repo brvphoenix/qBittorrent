@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Vill du pausa alla torrenter?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Exekveringslogg</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation>Logg</translation>
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3655,6 +3663,141 @@ Stöder formaten: S01E01, 1x1, 2017.12.31 och 31.12.2017 (datumformatet stöder 
     <message>
         <source>Unread</source>
         <translation>Oläst</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Allmänt</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation>Blockerad</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Okänd</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Alla</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>visar</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopiera</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Markera alla</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Loggtyp</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Rensa</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Varning</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Informationsmeddelanden</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Varningsmeddelanden</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Filtrera loggar</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Blockerade IP-adresser</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation>av</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation>Tidsstämpel</translation>
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation>Rensa alla</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Meddelande</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Loggnivåer:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Anledning</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation>objekt</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation>Bannad</translation>
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Normala meddelanden</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>Kritisk</translation>
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Kritiska meddelanden</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normal</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation>objekt</translation>
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Resultat</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Välj loggnivå...</translation>
     </message>
 </context>
 </TS>

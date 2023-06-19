@@ -609,6 +609,14 @@
         <source>Would you like to pause all torrents?</source>
         <translation>Kas soovite pausile panna kõik torrentid?</translation>
     </message>
+    <message>
+        <source>Execution Log</source>
+        <translation>Toimingute logi</translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -3651,6 +3659,141 @@ Toetab formaate: S01E01, 1x1, 2017.12.31 ja 31.12.2017 (kuupäevade formaate toe
     <message>
         <source>Unread</source>
         <translation>Lugemata</translation>
+    </message>
+</context>
+<context>
+    <name>ExecutionLogWidget</name>
+    <message>
+        <source>General</source>
+        <translation>Üldine</translation>
+    </message>
+    <message>
+        <source>Blocked</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Tundmatu</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Kõik</translation>
+    </message>
+    <message>
+        <source>showing</source>
+        <translation>kuvatakse</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopeeri</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Vali kõik</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation>Logi tüüp</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Tühjenda</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Hoiatus</translation>
+    </message>
+    <message>
+        <source>Information Messages</source>
+        <translation>Info teavitused</translation>
+    </message>
+    <message>
+        <source>Warning Messages</source>
+        <translation>Hoiatus teavitused</translation>
+    </message>
+    <message>
+        <source>Filter logs</source>
+        <translation>Filtreeri logid</translation>
+    </message>
+    <message>
+        <source>Blocked IPs</source>
+        <translation>Blokeeritud IP'd</translation>
+    </message>
+    <message>
+        <source>out of</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Olek</translation>
+    </message>
+    <message>
+        <source>Timestamp</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clear All</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Teavitus</translation>
+    </message>
+    <message>
+        <source>Log Levels:</source>
+        <translation>Logi tasemed:</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Selgitus</translation>
+    </message>
+    <message>
+        <source>item</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Banned</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Normal Messages</source>
+        <translation>Tava teavitused</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Critical Messages</source>
+        <translation>Kriitilised teavitused</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Tavaline</translation>
+    </message>
+    <message>
+        <source>items</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Results</source>
+        <translation>Tulemused</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Choose a log level...</source>
+        <translation>Vali logi tase...</translation>
     </message>
 </context>
 </TS>
