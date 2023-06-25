@@ -61,6 +61,7 @@ bool Utils::Gzip::compress(QIODevice &source, QIODevice &dest, const int level)
     int flush;
     do
     {
+        Q_ASSERT(source.isReadable());
         const qsizetype readBytes = source.read(in, chunkSize);
         if (readBytes == -1)
         {
@@ -80,6 +81,7 @@ bool Utils::Gzip::compress(QIODevice &source, QIODevice &dest, const int level)
             ret = deflate(&strm, flush);
             Q_ASSERT(ret != Z_STREAM_ERROR);
 
+            Q_ASSERT(dest.isWritable());
             const qsizetype have = chunkSize - strm.avail_out;
             if (dest.write(out, have) == -1)
             {
@@ -161,6 +163,7 @@ bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
 
     do
     {
+        Q_ASSERT(source.isReadable());
         const qsizetype readBytes = source.read(in, chunkSize);
         if (readBytes == -1)
         {
@@ -195,6 +198,7 @@ bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
                 return false;
             }
 
+            Q_ASSERT(dest.isWritable());
             const qsizetype have = chunkSize - strm.avail_out;
             if (dest.write(out, have) == -1)
             {
