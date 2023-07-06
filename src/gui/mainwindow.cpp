@@ -1168,7 +1168,7 @@ void MainWindow::closeEvent(QCloseEvent *e)
 
     // Accept exit
     e->accept();
-    qApp->exit();
+    QMetaObject::invokeMethod(qApp, [] { QCoreApplication::exit(); }, Qt::QueuedConnection);
 }
 
 // Display window to create a torrent

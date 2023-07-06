@@ -655,7 +655,7 @@ void Application::allTorrentsFinished()
     }
 
     qDebug("Exiting the application");
-    exit();
+    QMetaObject::invokeMethod(this, [] { QCoreApplication::exit(); }, Qt::QueuedConnection);
 }
 
 bool Application::sendParams(const QStringList &params)
@@ -777,10 +777,7 @@ try
     actionExit->setIcon(UIThemeManager::instance()->getIcon(u"application-exit"_qs));
     actionExit->setMenuRole(QAction::QuitRole);
     actionExit->setShortcut(Qt::CTRL | Qt::Key_Q);
-    connect(actionExit, &QAction::triggered, this, []
-    {
-        QApplication::exit();
-    });
+    connect(actionExit, &QAction::triggered, this, [] { QApplication::exit(); }, Qt::QueuedConnection);
     desktopIntegrationMenu->addAction(actionExit);
 
     m_desktopIntegration->setMenu(desktopIntegrationMenu);
@@ -879,7 +876,7 @@ try
 #ifdef DISABLE_GUI
         if (m_webui->isErrored())
             QCoreApplication::exit(EXIT_FAILURE);
-        connect(m_webui, &WebUI::fatalError, this, []() { QCoreApplication::exit(EXIT_FAILURE); });
+        connect(m_webui, &WebUI::fatalError, this, [] { QCoreApplication::exit(EXIT_FAILURE); }, Qt::QueuedConnection);
 
         const Preferences *pref = Preferences::instance();
 
@@ -946,10 +943,7 @@ void Application::createStartupProgressDialog()
     m_startupProgressDialog->setAutoReset(false);
     m_startupProgressDialog->setAutoClose(false);
 
-    connect(m_startupProgressDialog, &QProgressDialog::canceled, this, []()
-    {
-        QApplication::exit();
-    });
+    connect(m_startupProgressDialog, &QProgressDialog::canceled, this, [] { QApplication::exit(); }, Qt::QueuedConnection);
 
     connect(BitTorrent::Session::instance(), &BitTorrent::Session::startupProgressUpdated, m_startupProgressDialog, &QProgressDialog::setValue);
 
@@ -1261,9 +1255,10 @@ void Application::cleanup()
         ::ShutdownBlockReasonDestroy(reinterpret_cast<HWND>(m_window->effectiveWinId()));
 #endif // Q_OS_WIN
         delete m_window;
-        delete m_desktopIntegration;
-        UIThemeManager::freeInstance();
     }
+
+    delete m_desktopIntegration;
+    UIThemeManager::freeInstance();
 #endif // DISABLE_GUI
 
     Profile::freeInstance();
