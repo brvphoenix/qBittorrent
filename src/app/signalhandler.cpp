@@ -89,7 +89,7 @@ namespace
         const char *msgs[] = {"Catching signal: ", sysSigName[signum], "\nExiting cleanly\n"};
         std::for_each(std::begin(msgs), std::end(msgs), safePrint);
         signal(signum, SIG_DFL);
-        QCoreApplication::exit();  // unsafe, but exit anyway
+        QMetaObject::invokeMethod(qApp, [] { QCoreApplication::exit(); }, Qt::QueuedConnection);  // unsafe, but exit anyway
     }
 
 #ifdef STACKTRACE
