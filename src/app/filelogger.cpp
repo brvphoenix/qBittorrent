@@ -29,14 +29,16 @@
 #include "filelogger.h"
 
 #include <chrono>
+#include <functional>
 
 #include <QtGlobal>
 #include <QDateTime>
 #include <QDebug>
 #include <QDir>
 #include <QIODevice>
+#include <QRunnable>
 #include <QTextStream>
-#include <QThread>
+#include <QThreadPool>
 
 #include "base/global.h"
 #include "base/logger.h"
@@ -46,6 +48,20 @@
 namespace
 {
     const std::chrono::seconds FLUSH_INTERVAL {2};
+
+    Path handleBackups(const Path &baseName, const Path &renameFrom, const bool compressed)
+    {
+        Path renameTo = baseName + u".bak"_qs + (compressed ? u".gz"_qs :  u""_qs);
+        int counter = 0;
+
+        while(renameTo.exists())
+        {
+            renameTo = baseName + u".bak"_qs + QString::number(++counter) + (compressed ? u".gz"_qs :  u""_qs);
+        }
+
+        Utils::Fs::renameFile(renameFrom, renameTo);
+        return renameTo;
+    }
 
     bool isObsolete(const QFileInfo &info, FileLogger::FileLogAgeType ageType, int age)
     {
@@ -64,14 +80,14 @@ namespace
         return modificationDate <= QDateTime::currentDateTime();
     }
 
-    class WorkerThread final : public QThread
+    class CmpressTask final : public QRunnable
     {
-        Q_OBJECT
-        Q_DISABLE_COPY_MOVE(WorkerThread)
+        Q_DISABLE_COPY_MOVE(CmpressTask)
 
     public:
-        WorkerThread(const Path &p)
+        CmpressTask(const Path &p, const std::function<Path (const Path &, const bool)> callback)
             : m_path {p}
+            , m_callback {callback}
         {}
 
         void run() override
@@ -80,13 +96,13 @@ namespace
             QString err;
             if (compressBackupFile(m_path, destPath, 6, err))
             {
+                if (!(err.isEmpty()))
+                    qDebug() << u"Error: "_qs << err;
+
                 Utils::Fs::removeFile(m_path);
-                emit finished(destPath, err, true);
+                m_callback(destPath, true);
             }
         }
-
-    signals:
-        void finished(const Path &p, const QString &e, const bool c);
 
     private:
         bool compressBackupFile(const Path &sourcePath, const Path &destPath, int level, QString &msg)
@@ -133,6 +149,7 @@ namespace
         }
 
         Path m_path;
+        const std::function<Path (const Path &, const bool)> m_callback;
     };
 }
 
@@ -197,35 +214,15 @@ void FileLogger::changePath(const Path &newPath)
     openLogFile();
 }
 
-Path FileLogger::handleResults(const Path &renameFrom, const QString &msg, const bool compressed) const
-{
-    if (!(msg.isEmpty()))
-    {
-        qDebug() << u"Error: "_qs << msg;
-    }
-
-    Path renameTo = m_path + u".bak"_qs + (compressed ? u".gz"_qs :  u""_qs);
-    int counter = 0;
-
-    while(renameTo.exists())
-    {
-        renameTo = m_path + u".bak"_qs + QString::number(++counter) + (compressed ? u".gz"_qs :  u""_qs);
-    }
-
-    Utils::Fs::renameFile(renameFrom, renameTo);
-    return renameTo;
-}
-
 void FileLogger::makeBackup()
 {
-    Path renameTo = handleResults(m_path, {}, false);
+    Path renameTo = handleBackups(m_path, m_path, false);
 
     if (m_compressBackups)
     {
-        WorkerThread *thread = new WorkerThread(renameTo);
-        connect(thread, &WorkerThread::finished, this, &FileLogger::handleResults);
-        connect(thread, &WorkerThread::finished, thread, &QObject::deleteLater);
-        thread->start();
+        using namespace std::placeholders;
+        CmpressTask *task = new CmpressTask(renameTo, std::bind(handleBackups, m_path, _1, _2));
+        QThreadPool::globalInstance()->start(task);
     }
 }
 
@@ -257,7 +254,6 @@ void FileLogger::setAgeType(const FileLogAgeType value)
 {
     m_ageType = value;
 }
-
 
 void FileLogger::setBackup(const bool value)
 {
