@@ -50,8 +50,10 @@ bool Utils::Gzip::compress(QIODevice &source, QIODevice &dest, const int level)
     strm.zfree = Z_NULL;
     strm.opaque = Z_NULL;
 
-    std::vector<char> in(chunkSize);
-    std::vector<char> out(chunkSize);
+    std::vector<char> in;
+    in.reserve(chunkSize);
+    std::vector<char> out;
+    out.reserve(chunkSize);
 
     // windowBits = 15 + 16 to enable gzip
     // From the zlib manual: windowBits can also be greater than 15 for optional gzip encoding. Add 16 to windowBits
@@ -154,8 +156,10 @@ bool Utils::Gzip::decompress(QIODevice &source, QIODevice &dest)
     strm.avail_in = 0;
     strm.next_in = Z_NULL;
 
-    std::vector<char> in(chunkSize);
-    std::vector<char> out(chunkSize);
+    std::vector<char> in;
+    in.reserve(chunkSize);
+    std::vector<char> out;
+    out.reserve(chunkSize);
 
     // windowBits must be greater than or equal to the windowBits value provided to deflateInit2() while compressing
     // Add 32 to windowBits to enable zlib and gzip decoding with automatic header detection
