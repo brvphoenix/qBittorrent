@@ -1453,6 +1453,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             </tr>
             <tr>
                 <td>
+                    <label for="dhtBootstrapNodes">QBT_TR(DHT bootstrap nodes:)QBT_TR[CONTEXT=OptionsDialog]&nbsp;<a href="https://www.libtorrent.org/reference-Settings.html#dht_bootstrap_nodes" target="_blank">(?)</a></label>
+                </td>
+                <td>
+                    <input type="text" id="dhtBootstrapNodes" placeholder="QBT_TR(Resets to default if empty)QBT_TR[CONTEXT=OptionsDialog]" style="width: 15em;" />
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <label for="i2pInboundQuantity">QBT_TR(I2P inbound quantity (requires libtorrent &gt;= 2.0):)QBT_TR[CONTEXT=OptionsDialog]&nbsp;<a href="https://www.libtorrent.org/reference-Settings.html#i2p_inbound_quantity" target="_blank">(?)</a></label>
                 </td>
                 <td>
@@ -2321,6 +2329,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                         $('peerTurnoverCutoff').setProperty('value', pref.peer_turnover_cutoff);
                         $('peerTurnoverInterval').setProperty('value', pref.peer_turnover_interval);
                         $('requestQueueSize').setProperty('value', pref.request_queue_size);
+                        $('dhtBootstrapNodes').setProperty('value', pref.dht_bootstrap_nodes);
                         $('i2pInboundQuantity').setProperty('value', pref.i2p_inbound_quantity);
                         $('i2pOutboundQuantity').setProperty('value', pref.i2p_outbound_quantity);
                         $('i2pInboundLength').setProperty('value', pref.i2p_inbound_length);
@@ -2764,6 +2773,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
             settings.set('peer_turnover_cutoff', $('peerTurnoverCutoff').getProperty('value'));
             settings.set('peer_turnover_interval', $('peerTurnoverInterval').getProperty('value'));
             settings.set('request_queue_size', $('requestQueueSize').getProperty('value'));
+            settings.set('dht_bootstrap_nodes', $('dhtBootstrapNodes').getProperty('value'));
             settings.set('i2p_inbound_quantity', $('i2pInboundQuantity').getProperty('value'));
             settings.set('i2p_outbound_quantity', $('i2pOutboundQuantity').getProperty('value'));
             settings.set('i2p_inbound_length', $('i2pInboundLength').getProperty('value'));

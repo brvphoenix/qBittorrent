@@ -431,6 +431,8 @@ void AppController::preferencesAction()
     data[u"peer_turnover_interval"_s] = session->peerTurnoverInterval();
     // Maximum outstanding requests to a single peer
     data[u"request_queue_size"_s] = session->requestQueueSize();
+    // DHT bootstrap nodes
+    data[u"dht_bootstrap_nodes"_s] = session->getDHTBootstrapNodes();
 
     setResult(data);
 }
@@ -1049,6 +1051,9 @@ void AppController::setPreferencesAction()
     // Maximum outstanding requests to a single peer
     if (hasKey(u"request_queue_size"_s))
         session->setRequestQueueSize(it.value().toInt());
+    // DHT bootstrap nodes
+    if (hasKey(u"dht_bootstrap_nodes"_s))
+        session->setDHTBootstrapNodes(it.value().toString());
 
     // Save preferences
     pref->apply();

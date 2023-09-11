@@ -184,6 +184,8 @@ namespace BitTorrent
         void setGlobalMaxSeedingMinutes(int minutes) override;
         int globalMaxInactiveSeedingMinutes() const override;
         void setGlobalMaxInactiveSeedingMinutes(int minutes) override;
+        QString getDHTBootstrapNodes() const override;
+        void setDHTBootstrapNodes(const QString &nodes) override;
         bool isDHTEnabled() const override;
         void setDHTEnabled(bool enabled) override;
         bool isLSDEnabled() const override;
@@ -605,6 +607,7 @@ namespace BitTorrent
         bool m_IPFilteringConfigured = false;
         mutable bool m_listenInterfaceConfigured = false;
 
+        CachedSettingValue<QString> m_DHTBootstrapNodes;
         CachedSettingValue<bool> m_isDHTEnabled;
         CachedSettingValue<bool> m_isLSDEnabled;
         CachedSettingValue<bool> m_isPeXEnabled;
