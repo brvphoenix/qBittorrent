@@ -1695,11 +1695,11 @@ void MainWindow::on_actionRSSReader_triggered()
 
 void MainWindow::on_actionSearchWidget_triggered()
 {
-    if (!m_hasPython && m_ui->actionSearchWidget->isChecked())
+    if (m_ui->actionSearchWidget->isChecked())
     {
         const Utils::ForeignApps::PythonInfo pyInfo = Utils::ForeignApps::pythonInfo();
 
-        // Not installed
+        // Not found
         if (!pyInfo.isValid())
         {
             m_ui->actionSearchWidget->setChecked(false);
@@ -1739,7 +1739,6 @@ void MainWindow::on_actionSearchWidget_triggered()
             return;
         }
 
-        m_hasPython = true;
         m_ui->actionSearchWidget->setChecked(true);
         Preferences::instance()->setSearchEnabled(true);
     }
