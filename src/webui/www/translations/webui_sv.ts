@@ -1729,12 +1729,32 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
         <translation>Bdecode-tokengräns:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>När inaktiva distributionstiden når</translation>
+        <source>When total seeding time reaches</source>
+        <translation>När totala distributionstiden når</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Ingen)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Körbar Python sökväg (kan kräva omstart):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Återställ till standard om den är tom</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Utför värdnamnsuppslagning via proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>DHT bootstrap noder:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>När inaktiva distributionstiden når</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,20 +1765,12 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
         <translation>.Storleksgräns för .torrent-filer:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>När totala distributionstiden når</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Utför värdnamnsuppslagning via proxy</translation>
-    </message>
-    <message>
         <source>Mixed mode</source>
         <translation>Blandat läge</translation>
     </message>
     <message>
-        <source>If &amp;quot;mixed mode&amp;quot; is enabled, I2P torrents are allowed to also get peers from other sources than the tracker, and connect to regular IPs, not providing any anonymization. This may be useful if the user is not interested in the anonymization of I2P, but still wants to be able to connect to I2P peers.</source>
-        <translation>Om &amp;quot;blandat läge&amp;quot; är aktiverat, tillåts I2P-torrenter att även få jämlikar från andra källor än spåraren och ansluta till vanliga IP-adresser, utan att ge någon anonymisering. Detta kan vara användbart om användaren inte är intresserad av anonymisering av I2P, men ändå vill kunna ansluta till I2P-jämlikar.</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Detektera automatiskt om den är tom)</translation>
     </message>
     <message>
         <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
@@ -1779,6 +1791,18 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P inkommande längd (kräver libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>If &amp;quot;mixed mode&amp;quot; is enabled, I2P torrents are allowed to also get peers from other sources than the tracker, and connect to regular IPs, not providing any anonymization. This may be useful if the user is not interested in the anonymization of I2P, but still wants to be able to connect to I2P peers.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
         <source>Checking (0)</source>
         <translation>Kontrollerar (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     <message>
         <source>Availability</source>
         <translation>Tillgänglighet</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Återannonsera om</translation>
     </message>
 </context>
 <context>

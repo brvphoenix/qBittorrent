@@ -1730,12 +1730,32 @@ Usar «;» para dividir entradas múltiples. Pode usar o comodín «*».</transl
         <translation>Límite de tokens de Bdecode:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Cando o tempo de compartición inactiva alcance</translation>
+        <source>When total seeding time reaches</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>(None)</source>
         <translation>(Ningún)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1746,12 +1766,8 @@ Usar «;» para dividir entradas múltiples. Pode usar o comodín «*».</transl
         <translation>Límite de tamaño do ficheiro .torrent:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Cando o tempo total de compartición alcance</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Realizar a busca do nome de host a través do proxy</translation>
+        <source>(Auto detect if empty)</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1780,6 +1796,14 @@ Usar «;» para dividir entradas múltiples. Pode usar o comodín «*».</transl
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Lonxitude de entrada I2P (require libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2361,6 +2385,14 @@ Usar «;» para dividir entradas múltiples. Pode usar o comodín «*».</transl
         <source>Checking (0)</source>
         <translation>Comprobando (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2512,6 +2544,10 @@ Usar «;» para dividir entradas múltiples. Pode usar o comodín «*».</transl
     <message>
         <source>Availability</source>
         <translation>Dispoñibilidade</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

@@ -1737,20 +1737,20 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
         <translation>(Geen)</translation>
     </message>
     <message>
-        <source>Bdecode depth limit:</source>
-        <translation>Limiet Bdecode-diepte:</translation>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <source>.torrent file size limit:</source>
-        <translation>Limiet .torrent-bestandsgrootte:</translation>
-    </message>
-    <message>
-        <source>When total seeding time reaches</source>
-        <translation>Wanneer een totale seed-tijd bereikt wordt van</translation>
+        <source>Resets to default if empty</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>Perform hostname lookup via proxy</source>
         <translation>Opzoeken van hostnamen uitvoeren via proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1761,8 +1761,8 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
         <translation>Als &amp;quot;gemengde modus&amp;quot; is ingeschakeld, kunnen I2P-torrents ook peers krijgen van andere bronnen dan de tracker, en verbinding maken met gewone IP's, zonder enige anonimisering. Dit kan nuttig zijn als de gebruiker niet geïnteresseerd is in de anonimisering van I2P, maar toch wil kunnen verbinden met I2P-peers.</translation>
     </message>
     <message>
-        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation>I2P inkomende hoeveelheid (vereistlibtorrent &amp;gt;= 2.0):</translation>
+        <source>(Auto detect if empty)</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>I2P (Experimental) (requires libtorrent &amp;gt;= 2.0)</source>
@@ -1779,6 +1779,30 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P inkomende lengte (vereist libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>.torrent file size limit:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>When total seeding time reaches</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Bdecode depth limit:</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
         <source>Checking (0)</source>
         <translation>Controleren (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
     <message>
         <source>Availability</source>
         <translation>Beschikbaarheid</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

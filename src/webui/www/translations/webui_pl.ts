@@ -1729,12 +1729,32 @@ Użyj ';' do rozdzielania wielu wpisów. Można użyć wieloznacznika '*'.</tran
         <translation>Limit tokena bdecode:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Gdy nieaktywny czas seedowania osiągnie</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Gdy całkowity czas seedowania osiągnie</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Żaden)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Ścieżka pliku wykonywalnego Pythona (może wymagać ponownego uruchomienia):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Resetuje do ustawień domyślnych, jeśli puste</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Wykonaj wyszukiwanie nazwy hosta przez serwer proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>Węzły bootstrap DHT:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Gdy nieaktywny czas seedowania osiągnie</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ Użyj ';' do rozdzielania wielu wpisów. Można użyć wieloznacznika '*'.</tran
         <translation>Limit rozmiaru pliku .torrent:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Gdy całkowity czas seedowania osiągnie</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Wykonaj wyszukiwanie nazwy hosta przez serwer proxy</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Autowykrywanie, jeśli puste)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ Użyj ';' do rozdzielania wielu wpisów. Można użyć wieloznacznika '*'.</tran
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Długość przychodzących I2P (wymaga libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Użyj ';' do rozdzielania wielu wpisów. Można użyć wieloznacznika '*'.</tran
         <source>Checking (0)</source>
         <translation>Sprawdzanie (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Użyj ';' do rozdzielania wielu wpisów. Można użyć wieloznacznika '*'.</tran
     <message>
         <source>Availability</source>
         <translation>Dostępność</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Rozgłoszenie za</translation>
     </message>
 </context>
 <context>

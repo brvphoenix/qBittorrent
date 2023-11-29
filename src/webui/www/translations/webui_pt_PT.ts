@@ -1737,7 +1737,19 @@ Utilize ';' para dividir várias entradas. Pode usar o asterisco '*'.</translati
         <translation>(Nenhum(a))</translation>
     </message>
     <message>
-        <source>Bdecode depth limit:</source>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Repor o valor por defeito se estiver vazio</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Realizar a consulta de hostname via proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1745,12 +1757,8 @@ Utilize ';' para dividir várias entradas. Pode usar o asterisco '*'.</translati
         <translation>Limite de tamanho do ficheiro .torrent</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation type="unfinished" />
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Realizar a consulta de hostname via proxy</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Deteção automática se estiver vazio)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1778,6 +1786,22 @@ Utilize ';' para dividir várias entradas. Pode usar o asterisco '*'.</translati
     </message>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>When total seeding time reaches</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Bdecode depth limit:</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2360,6 +2384,14 @@ Utilize ';' para dividir várias entradas. Pode usar o asterisco '*'.</translati
         <source>Checking (0)</source>
         <translation>A verificar (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Utilize ';' para dividir várias entradas. Pode usar o asterisco '*'.</translati
     <message>
         <source>Availability</source>
         <translation>Disponibilidade</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

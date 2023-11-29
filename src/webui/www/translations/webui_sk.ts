@@ -1729,12 +1729,32 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
         <translation>Bdecode obmedzenie tokenu:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Keď čas neaktívneho seedovania dosiahne</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Keď celkový čas seedovania dosiahne</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(žiadny)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Zisťovať názov hostiteľa cez proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Keď čas neaktívneho seedovania dosiahne</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
         <translation>Obmedzenie veľkosti .torrent súboru:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Keď celkový čas seedovania dosiahne</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Zisťovať názov hostiteľa cez proxy</translation>
+        <source>(Auto detect if empty)</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P prichádzajúca dĺžka (vyžaduje libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
         <source>Checking (0)</source>
         <translation>Kontrola (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
     <message>
         <source>Availability</source>
         <translation>Dostupnosť</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

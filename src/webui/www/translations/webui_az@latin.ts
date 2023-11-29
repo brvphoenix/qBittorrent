@@ -1749,8 +1749,20 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
         <translation>Ümumi göndərmə həddinə çatdıqda</translation>
     </message>
     <message>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
         <source>Perform hostname lookup via proxy</source>
         <translation>Proksi vasitəsilə host adı axtarışını icra etmək</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1761,8 +1773,8 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
         <translation>Əgər &amp;quot;qarışıq rejim&amp;quot; aktiv edilərsə I2P torrentlərə izləyicidən başqa digər mənbələrdən iştirakçılar əldə etməyə və heç bir anonimləşdirmə təmin etməyən adi IP-lərə qoşulmağa icazə verilir. Bu, istifadəçiyə I2P-nin anonimləşdirilmə maraqlı deyilsə, lakin yenə də I2P iştirakçılarına qoşulmaq istədiyi halda faydalı ola bilər.</translation>
     </message>
     <message>
-        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation>Daxil olan İ2P kəmiyyəti (libtorrent &amp;gt;= 2.0 tələb olunur):</translation>
+        <source>(Auto detect if empty)</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>I2P (Experimental) (requires libtorrent &amp;gt;= 2.0)</source>
@@ -1779,6 +1791,18 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Daxil olan İ2P uzunluğu (libtorrent &amp;gt;= 2.0 tələb olunur):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
         <source>Checking (0)</source>
         <translation>Yoxlanılır (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
     <message>
         <source>Availability</source>
         <translation>Əlçatan</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

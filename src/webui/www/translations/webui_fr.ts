@@ -1728,12 +1728,32 @@ Utiliser ';' pour diviser plusieurs entrées. Le caractère générique '*' peut
         <translation>Limite de jetons pour Bdecode :</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Lorsque la durée de partage inactif atteint</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Lorsque la durée totale de partage atteint</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Aucun)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Chemin de l’exécutable Python (peut nécessiter un redémarrage) :</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Réinitialise aux valeurs par défaut si vide</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Recherche du nom d'hôte via un proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>Nœuds d'amorçage DHT :</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Lorsque la durée de partage inactif atteint</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1744,12 +1764,8 @@ Utiliser ';' pour diviser plusieurs entrées. Le caractère générique '*' peut
         <translation>Limite de la taille du fichier .torrent :</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Lorsque la durée totale de partage atteint</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Recherche du nom d'hôte via un proxy</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Détection automatique si vide)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1778,6 +1794,14 @@ Utiliser ';' pour diviser plusieurs entrées. Le caractère générique '*' peut
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Taille de l'I2P entrant (requiert libtorrent &amp;gt;= 2.0) :</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2359,6 +2383,14 @@ Utiliser ';' pour diviser plusieurs entrées. Le caractère générique '*' peut
         <source>Checking (0)</source>
         <translation>En vérification (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2510,6 +2542,10 @@ Utiliser ';' pour diviser plusieurs entrées. Le caractère générique '*' peut
     <message>
         <source>Availability</source>
         <translation>Disponibilité</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Réannonce dans</translation>
     </message>
 </context>
 <context>

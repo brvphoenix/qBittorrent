@@ -1731,12 +1731,32 @@ Platzhalter '*' kann verwendet werden.</translation>
         <translation>Bdecode-Token-Limit:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Wenn die inaktive Seed-Zeit erreicht hat:</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Wenn die gesamte Seed-Zeit erreicht hat:</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Keiner)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Pfad für die Python Ausführungsdatei (ev. Neustart erforderlich)</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Standardeinstellung wenn leer</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Hostnamen-Suche über Proxy durchführen</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>DHT-Bootstrap-Knotenpunkte:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Wenn die inaktive Seed-Zeit erreicht hat:</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1747,12 +1767,8 @@ Platzhalter '*' kann verwendet werden.</translation>
         <translation>.torrent Dateigrößenbegrenzung:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Wenn die gesamte Seed-Zeit erreicht hat:</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Hostnamen-Suche über Proxy durchführen</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Automatische Erkennung wenn leer)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1781,6 +1797,14 @@ Platzhalter '*' kann verwendet werden.</translation>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P-Eingangslänge (erfordert libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2362,6 +2386,14 @@ Platzhalter '*' kann verwendet werden.</translation>
         <source>Checking (0)</source>
         <translation>Überprüfe (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2513,6 +2545,10 @@ Platzhalter '*' kann verwendet werden.</translation>
     <message>
         <source>Availability</source>
         <translation>Verfügbarkeit</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Erneute Anmeldung in</translation>
     </message>
 </context>
 <context>

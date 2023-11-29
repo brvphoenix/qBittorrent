@@ -1749,8 +1749,20 @@ DNSリバインディング攻撃を防ぐために、WebUIサーバーが使用
         <translation>合計シード時間に達したとき</translation>
     </message>
     <message>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>空欄の場合はデフォルトにリセット</translation>
+    </message>
+    <message>
         <source>Perform hostname lookup via proxy</source>
         <translation>プロキシー経由でホスト名の名前解決を行う</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1761,8 +1773,8 @@ DNSリバインディング攻撃を防ぐために、WebUIサーバーが使用
         <translation type="unfinished" />
     </message>
     <message>
-        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation type="unfinished" />
+        <source>(Auto detect if empty)</source>
+        <translation>(空欄の場合は自動検出)</translation>
     </message>
     <message>
         <source>I2P (Experimental) (requires libtorrent &amp;gt;= 2.0)</source>
@@ -1778,6 +1790,18 @@ DNSリバインディング攻撃を防ぐために、WebUIサーバーが使用
     </message>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2360,6 +2384,14 @@ DNSリバインディング攻撃を防ぐために、WebUIサーバーが使用
         <source>Checking (0)</source>
         <translation>チェック中 (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ DNSリバインディング攻撃を防ぐために、WebUIサーバーが使用
     <message>
         <source>Availability</source>
         <translation>可用性</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>次のアナウンスまで</translation>
     </message>
 </context>
 <context>

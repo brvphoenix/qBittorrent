@@ -1729,12 +1729,32 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Ліміт токенів Bdecode:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>По досягненні часу бездіяльності роздачі</translation>
+        <source>When total seeding time reaches</source>
+        <translation>По досягненні загального часу роздачі</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Немає)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Шлях до виконуваного файлу Python (може знадобитися перезапуск):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Скидає значення за умовчанням, якщо пусте</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Виконайте пошук імені хоста через проксі</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>Вузли завантаження DHT:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>По досягненні часу бездіяльності роздачі</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Обмеження розміру файлу .torrent:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>По досягненні загального часу роздачі</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Виконайте пошук імені хоста через проксі</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Автоматичне визначення, якщо порожній)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Довжина вхідного I2P (потрібен libtorrent &gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>Checking (0)</source>
         <translation>Перевірка (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Availability</source>
         <translation>Доступно</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Повторно оголосити In</translation>
     </message>
 </context>
 <context>

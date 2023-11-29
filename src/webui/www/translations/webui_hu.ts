@@ -1729,12 +1729,32 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
         <translation>Bdecode token korlát:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Amikor az inaktív seed időt eléri</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Amikor a teljes seed időt eléri</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Nincs)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Python útvonala (újraindítást igényelhet):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Alapértelmezettre visszaáll ha üres</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Kiszolgálónév lekérdezése proxyn keresztül</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>DHT bootstrap csomópontok:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Amikor az inaktív seed időt eléri</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,14 +1765,6 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
         <translation>.torrent fájl méret korlát</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Amikor a teljes seed időt eléri</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Kiszolgálónév lekérdezése proxyn keresztül</translation>
-    </message>
-    <message>
         <source>Mixed mode</source>
         <translation>Kevert mód</translation>
     </message>
@@ -1761,8 +1773,8 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
         <translation>Ha a &amp;quot;kevert mód&amp;quot; engedélyezett, az I2P torrenteknek is megengedett, hogy partnereket szerezzenek a trackeren kívüli forrásokból is, és rendes IP-címekhez csatlakozzanak, anonimizálást nem biztosítva. Ez hasznos lehet, ha a felhasználó nem érdekelt az I2P anonimizálásban, de mégis szeretne I2P partnerekhez csatlakozni.</translation>
     </message>
     <message>
-        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation>I2P bejövő mennyiség (libtorrent &amp;gt;= 2.0 szükséges):</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Auto felismerés ha üres)</translation>
     </message>
     <message>
         <source>I2P (Experimental) (requires libtorrent &amp;gt;= 2.0)</source>
@@ -1779,6 +1791,18 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P bejövő hossz (libtorrent &amp;gt;= 2.0 szükséges):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
         <source>Checking (0)</source>
         <translation>Ellenőrzés (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
     <message>
         <source>Availability</source>
         <translation>Elérhetőség</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Újrajelentés</translation>
     </message>
 </context>
 <context>

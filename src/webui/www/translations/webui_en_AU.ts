@@ -1726,15 +1726,35 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
     </message>
     <message>
         <source>Bdecode token limit:</source>
-        <translation>Bdecode token limit:</translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>When inactive seeding time reaches</translation>
+        <source>When total seeding time reaches</source>
+        <translation>When total seeding time reaches</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(None)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Perform hostname lookup via proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>When inactive seeding time reaches</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,14 +1765,6 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
         <translation>.torrent file size limit:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>When total seeding time reaches</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Perform hostname lookup via proxy</translation>
-    </message>
-    <message>
         <source>Mixed mode</source>
         <translation>Mixed mode</translation>
     </message>
@@ -1761,8 +1773,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
         <translation>If &amp;quot;mixed mode&amp;quot; is enabled, I2P torrents are allowed to also get peers from other sources than the tracker, and connect to regular IPs, not providing any anonymisation. This may be useful if the user is not interested in the anonymisation of I2P, but still wants to be able to connect to I2P peers.</translation>
     </message>
     <message>
-        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</translation>
+        <source>(Auto detect if empty)</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>I2P (Experimental) (requires libtorrent &amp;gt;= 2.0)</source>
@@ -1779,6 +1791,18 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
         <source>Checking (0)</source>
         <translation>Checking (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
     <message>
         <source>Availability</source>
         <translation>Availability</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

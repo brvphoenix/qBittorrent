@@ -1729,12 +1729,32 @@ Koristite ';' za razdvajanje više unosa. Može koristiti zamjenski znak '*'.</t
         <translation>Ograničenje Bdecode tokena:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Kada neaktivno vrijeme seedanja dosegne</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Kada ukupno vrijeme seedanja dosegne</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Nijedno)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Python izvršna putanja (možda će zahtijevati ponovno pokretanje):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Vraća se na zadano ako je prazno</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Izvršite traženje naziva hosta putem proxyja</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>DHT čvorovi za pokretanje:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Kada neaktivno vrijeme seedanja dosegne</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ Koristite ';' za razdvajanje više unosa. Može koristiti zamjenski znak '*'.</t
         <translation>Ograničenje veličine .torrent datoteke:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Kada ukupno vrijeme seedanja dosegne</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Izvršite traženje naziva hosta putem proxyja</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Automatsko otkrivanje ako je prazno)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ Koristite ';' za razdvajanje više unosa. Može koristiti zamjenski znak '*'.</t
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P ulazna duljina (zahtijeva libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Koristite ';' za razdvajanje više unosa. Može koristiti zamjenski znak '*'.</t
         <source>Checking (0)</source>
         <translation>Provjera (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Koristite ';' za razdvajanje više unosa. Može koristiti zamjenski znak '*'.</t
     <message>
         <source>Availability</source>
         <translation>Dostupnost</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Ponovno najavi za</translation>
     </message>
 </context>
 <context>

@@ -1731,12 +1731,32 @@ Usa ';' per dividere più voci.</translation>
         <translation>Limite token Bdecode:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Quando viene raggiunto il tempo seeding non attivo</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Quando viene raggiunto il tempo totale seeding</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Nessuno)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Percorso dell'eseguibile python (potrebbe richiedere il riavvio):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Ripristina il predefinito se vuoto</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Esegui ricerca nome host tramite proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>Nodi bootstrap DHT:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Quando viene raggiunto il tempo seeding non attivo</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,14 +1765,6 @@ Usa ';' per dividere più voci.</translation>
     <message>
         <source>.torrent file size limit:</source>
         <translation>Dimensione limite del file .torrent:</translation>
-    </message>
-    <message>
-        <source>When total seeding time reaches</source>
-        <translation>Quando viene raggiunto il tempo totale seeding</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Esegui ricerca nome host tramite proxy</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1780,8 +1792,20 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <translation>Lunghezza I2P in uscita (richiede libtorrent &gt;= 2.0):</translation>
     </message>
     <message>
+        <source>(Auto detect if empty)</source>
+        <translation>(Rilevamento automatico se vuoto)</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation>Lunghezza I2P in entrata (richiede libtorrent &amp;gt;= 2.0):</translation>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2363,6 +2387,14 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <source>Checking (0)</source>
         <translation>Verifica (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2514,6 +2546,10 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Availability</source>
         <translation>Disponibilità</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Riannuncia</translation>
     </message>
 </context>
 <context>

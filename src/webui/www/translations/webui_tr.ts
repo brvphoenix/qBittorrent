@@ -1729,12 +1729,32 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
         <translation>Bdecode belirteç sınırı:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Etkin olmayan gönderim şu süreye ulaştığında</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Toplam gönderim şu süreye ulaştığında</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Yok)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Python çalıştırılabilir dosya yolu (yeniden başlatma gerektirebilir):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Boşsa varsayılana sıfırlanır</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Proksi aracılığıyla anamakine adı araması gerçekleştir</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>DHT önyükleme düğümleri:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Etkin olmayan gönderim şu süreye ulaştığında</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
         <translation>.torrent dosya boyutu sınırı:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Toplam gönderim şu süreye ulaştığında</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Proksi aracılığıyla anamakine adı araması gerçekleştir</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Boşsa otomatik algıla)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P gelen uzunluğu (libtorrent &amp;gt;= 2.0 gerektirir):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
         <source>Checking (0)</source>
         <translation>Denetleniyor (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     <message>
         <source>Availability</source>
         <translation>Kullanılabilirlik</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Yeniden Duyuru Süresi</translation>
     </message>
 </context>
 <context>

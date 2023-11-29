@@ -1729,12 +1729,32 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Όριο Bdecode token:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Όταν ο χρόνος ανενεργού seeding ολοκληρωθεί</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Όταν ο συνολικός χρόνος seeding ολοκληρωθεί</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Κανένα)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Εκτελέσιμη διαδρομή Python (μπορεί να απαιτεί επανεκκίνηση):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Επαναφέρεται στην προεπιλογή εάν είναι κενό</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Εκτέλεση αναζήτησης hostname μέσω proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>Κόμβοι εκκίνησης DHT:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Όταν ο χρόνος ανενεργού seeding ολοκληρωθεί</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>όριο μεγέθους αρχείου .torrent</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Όταν ο συνολικός χρόνος seeding ολοκληρωθεί</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Εκτέλεση αναζήτησης hostname μέσω proxy</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Αυτόματος εντοπισμός εάν είναι κενό)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Μήκος εισερχομένων I2P (απαιτεί libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>Checking (0)</source>
         <translation>Γίνεται έλεγχος (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Availability</source>
         <translation>Διαθεσιμότητα</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Επανανακοίνωση σε:</translation>
     </message>
 </context>
 <context>

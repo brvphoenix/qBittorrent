@@ -1726,15 +1726,35 @@ DNS 재결합 공격을 방어하기 위해
     </message>
     <message>
         <source>Bdecode token limit:</source>
-        <translation>Bdecode 토큰 제한:</translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>비활성 시딩 시간에 도달한 경우</translation>
+        <source>When total seeding time reaches</source>
+        <translation>총 시딩 시간에 도달한 경우</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(없음)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>비어 있는 경우 기본값으로 재설정</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>프록시를 통한 호스트 이름 조회 수행</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>비활성 시딩 시간에 도달한 경우</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,14 +1765,6 @@ DNS 재결합 공격을 방어하기 위해
         <translation>.torrent 파일 크기 제한:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>총 시딩 시간에 도달한 경우</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>프록시를 통한 호스트 이름 조회 수행</translation>
-    </message>
-    <message>
         <source>Mixed mode</source>
         <translation>혼합 모드</translation>
     </message>
@@ -1761,8 +1773,8 @@ DNS 재결합 공격을 방어하기 위해
         <translation>"혼합 모드"인 경우 활성화되면 I2P 토렌트는 트래커가 아닌 다른 소스에서 피어를 가져오고 익명화를 제공하지 않고 일반 IP에 연결할 수도 있습니다. 이는 사용자가 I2P의 익명화에 관심이 없지만 여전히 I2P 피어에 연결할 수 있기를 원하는 경우 유용할 수 있습니다.</translation>
     </message>
     <message>
-        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation>I2P 인바운드 수량 (libtorrent &amp;gt;= 2.0 필요):</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(비어있는 경우 자동 감지)</translation>
     </message>
     <message>
         <source>I2P (Experimental) (requires libtorrent &amp;gt;= 2.0)</source>
@@ -1779,6 +1791,18 @@ DNS 재결합 공격을 방어하기 위해
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P 인바운드 길이 (libtorrent &amp;gt;= 2.0 필요):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ DNS 재결합 공격을 방어하기 위해
         <source>Checking (0)</source>
         <translation>확인 중 (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ DNS 재결합 공격을 방어하기 위해
     <message>
         <source>Availability</source>
         <translation>가용성</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>재공지</translation>
     </message>
 </context>
 <context>

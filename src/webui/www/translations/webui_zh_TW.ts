@@ -1729,12 +1729,32 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Bdecode 權杖限制：</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>當不活躍種子時間達到</translation>
+        <source>When total seeding time reaches</source>
+        <translation>當總種子時間達到</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(無)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Python 可執行檔路徑（可能需要重新啟動）：</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>若為空，則重設回預設值</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>透過代理伺服器執行主機名稱查詢</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>DHT 自舉節點：</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>當不活躍種子時間達到</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>.torrent 檔案大小限制：</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>當總種子時間達到</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>透過代理伺服器執行主機名稱查詢</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>（若為空則自動偵測）</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>I2P 入站長度（需要 libtorrent &amp;gt;= 2.0）：</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>Checking (0)</source>
         <translation>正在檢查 (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Availability</source>
         <translation>可得性</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>重新發佈於</translation>
     </message>
 </context>
 <context>

@@ -1727,15 +1727,35 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
     </message>
     <message>
         <source>Bdecode token limit:</source>
-        <translation>Límit de testimoni de Bdecode:</translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Quan s'arriba al temps de sembra inactiva</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Quan s'arriba al temps total de sembra</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Cap)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Realitzar cerca de nom de host via proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Quan s'arriba al temps de sembra inactiva</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1746,14 +1766,6 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
         <translation>Límit de mida del fitxer .torrent:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Quan s'arriba al temps total de sembra</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Realitzar cerca de nom de host via proxy</translation>
-    </message>
-    <message>
         <source>Mixed mode</source>
         <translation>Mode mixte</translation>
     </message>
@@ -1762,8 +1774,8 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
         <translation>Si el &amp;quot;mode mixt&amp;quot; està habilitat, els torrents d'I2P també poden obtenir clients d'altres fonts que no siguin el rastrejador i connectar-se a IP habituals, sense proporcionar cap anonimat. Això pot ser útil si l'usuari no està interessat en l'anonimització d'I2P, però encara vol poder connectar-se amb clients d'I2P.</translation>
     </message>
     <message>
-        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
-        <translation>Quantitat d'entrada I2P (requereix libtorrent &amp;gt;= 2.0):</translation>
+        <source>(Auto detect if empty)</source>
+        <translation type="unfinished" />
     </message>
     <message>
         <source>I2P (Experimental) (requires libtorrent &amp;gt;= 2.0)</source>
@@ -1780,6 +1792,18 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Longitud d'entrada I2P (requereix libtorrent &amp;gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>I2P inbound quantity (requires libtorrent &amp;gt;= 2.0):</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2361,6 +2385,14 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
         <source>Checking (0)</source>
         <translation>Comprovant (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2512,6 +2544,10 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
     <message>
         <source>Availability</source>
         <translation>Disponibilitat</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

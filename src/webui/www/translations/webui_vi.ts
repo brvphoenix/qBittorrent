@@ -1729,12 +1729,32 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
         <translation>Giới hạn token Bdecode:</translation>
     </message>
     <message>
-        <source>When inactive seeding time reaches</source>
-        <translation>Khi thời gian gieo hạt không hoạt động đạt đến</translation>
+        <source>When total seeding time reaches</source>
+        <translation>Khi tổng thời gian seeding đạt</translation>
     </message>
     <message>
         <source>(None)</source>
         <translation>(Trống)</translation>
+    </message>
+    <message>
+        <source>Python executable path (may require restart):</source>
+        <translation>Đường dẫn thực thi Python (có thể yêu cầu khởi động lại):</translation>
+    </message>
+    <message>
+        <source>Resets to default if empty</source>
+        <translation>Đặt lại về mặc định nếu trống</translation>
+    </message>
+    <message>
+        <source>Perform hostname lookup via proxy</source>
+        <translation>Thực hiện tra cứu tên máy chủ qua proxy</translation>
+    </message>
+    <message>
+        <source>DHT bootstrap nodes:</source>
+        <translation>Các nút khởi động DHT:</translation>
+    </message>
+    <message>
+        <source>When inactive seeding time reaches</source>
+        <translation>Khi thời gian gieo hạt không hoạt động đạt đến</translation>
     </message>
     <message>
         <source>Bdecode depth limit:</source>
@@ -1745,12 +1765,8 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
         <translation>Giới hạn kích cỡ tệp .torrent:</translation>
     </message>
     <message>
-        <source>When total seeding time reaches</source>
-        <translation>Khi tổng thời gian seeding đạt</translation>
-    </message>
-    <message>
-        <source>Perform hostname lookup via proxy</source>
-        <translation>Thực hiện tra cứu tên máy chủ qua proxy</translation>
+        <source>(Auto detect if empty)</source>
+        <translation>(Tự động phát hiện nếu trống)</translation>
     </message>
     <message>
         <source>Mixed mode</source>
@@ -1779,6 +1795,14 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
     <message>
         <source>I2P inbound length (requires libtorrent &amp;gt;= 2.0):</source>
         <translation>Độ dài gửi đến I2P (yêu cầu libtorrent &gt;= 2.0):</translation>
+    </message>
+    <message>
+        <source>Compress log backups with gzip</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Be careful enabling this option. Files compressed with gzip can't be opened directly on Windows OS without 3rd-party tools.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2360,6 +2384,14 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
         <source>Checking (0)</source>
         <translation>Kiểm tra (0)</translation>
     </message>
+    <message>
+        <source>Moving (%1)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Moving (0)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentModel</name>
@@ -2511,6 +2543,10 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
     <message>
         <source>Availability</source>
         <translation>Khả dụng</translation>
+    </message>
+    <message>
+        <source>Reannounce In</source>
+        <translation>Thông báo lại Trong</translation>
     </message>
 </context>
 <context>
