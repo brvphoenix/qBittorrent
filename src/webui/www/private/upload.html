@@ -10,6 +10,7 @@
     <script src="scripts/localpreferences.js?v=${CACHEID}"></script>
     <script src="scripts/color-scheme.js?v=${CACHEID}"></script>
     <script src="scripts/download.js?v=${CACHEID}"></script>
+    <script src="scripts/pathAutofill.js?v=${CACHEID}"></script>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                         <label for="savepath">QBT_TR(Save files to location:)QBT_TR[CONTEXT=HttpServer]</label>
                     </td>
                     <td>
-                        <input type="text" id="savepath" name="savepath" style="width: 16em;" />
+                        <input type="text" id="savepath" name="savepath" class="pathDirectory" style="width: 16em;" />
                     </td>
                 </tr>
                 <tr>
@@ -173,6 +174,8 @@
 
         if ((Browser.platform === "ios") || ((Browser.platform === "mac") && (navigator.maxTouchPoints > 1)))
             $("fileselect").accept = ".torrent";
+
+        window.qBittorrent.pathAutofill.attachPathAutofill();
     </script>
 </body>
 
