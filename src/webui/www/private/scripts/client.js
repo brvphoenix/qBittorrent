@@ -707,7 +707,7 @@ window.addEventListener("DOMContentLoaded", () => {
         };
     })();
 
-    let syncMainDataTimeoutID;
+    let syncMainDataTimeoutID = -1;
     let syncRequestInProgress = false;
     const syncMainData = function() {
         const url = new URI("api/v2/sync/maindata");
@@ -895,6 +895,7 @@ window.addEventListener("DOMContentLoaded", () => {
             return;
 
         clearTimeout(syncMainDataTimeoutID);
+        syncMainDataTimeoutID = -1;
 
         if (window.qBittorrent.Client.isStopped())
             return;

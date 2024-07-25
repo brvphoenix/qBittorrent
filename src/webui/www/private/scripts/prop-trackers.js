@@ -41,7 +41,7 @@ window.qBittorrent.PropTrackers = (function() {
     let current_hash = "";
 
     const torrentTrackersTable = new window.qBittorrent.DynamicTable.TorrentTrackersTable();
-    let loadTrackersDataTimer;
+    let loadTrackersDataTimer = -1;
 
     const loadTrackersData = function() {
         if ($("prop_trackers").hasClass("invisible")
@@ -121,6 +121,7 @@ window.qBittorrent.PropTrackers = (function() {
 
     const updateData = function() {
         clearTimeout(loadTrackersDataTimer);
+        loadTrackersDataTimer = -1;
         loadTrackersData();
     };
 

@@ -74,7 +74,7 @@ window.qBittorrent.PropGeneral = (function() {
         piecesBar.clear();
     };
 
-    let loadTorrentDataTimer;
+    let loadTorrentDataTimer = -1;
     const loadTorrentData = function() {
         if ($("prop_general").hasClass("invisible")
             || $("propertiesPanel_collapseToggle").hasClass("panel-expand")) {
@@ -255,6 +255,7 @@ window.qBittorrent.PropGeneral = (function() {
 
     const updateData = function() {
         clearTimeout(loadTorrentDataTimer);
+        loadTorrentDataTimer = -1;
         loadTorrentData();
     };
 

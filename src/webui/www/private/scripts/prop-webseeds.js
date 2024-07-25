@@ -90,7 +90,7 @@ window.qBittorrent.PropWebseeds = (function() {
 
     let current_hash = "";
 
-    let loadWebSeedsDataTimer;
+    let loadWebSeedsDataTimer = -1;
     const loadWebSeedsData = function() {
         if ($("prop_webseeds").hasClass("invisible")
             || $("propertiesPanel_collapseToggle").hasClass("panel-expand")) {
@@ -140,6 +140,7 @@ window.qBittorrent.PropWebseeds = (function() {
 
     const updateData = function() {
         clearTimeout(loadWebSeedsDataTimer);
+        loadWebSeedsDataTimer = -1;
         loadWebSeedsData();
     };
 

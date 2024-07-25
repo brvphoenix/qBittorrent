@@ -49,7 +49,7 @@ window.qBittorrent.Search = (function() {
     };
 
     const searchTabIdPrefix = "Search-";
-    let loadSearchPluginsTimer;
+    let loadSearchPluginsTimer = -1;
     const searchPlugins = [];
     let prevSearchPluginsResponse;
     let selectedCategory = "QBT_TR(All categories)QBT_TR[CONTEXT=SearchEngineWidget]";
@@ -209,7 +209,7 @@ window.qBittorrent.Search = (function() {
             rowId: 0,
             selectedRowIds: [],
             running: true,
-            loadResultsTimer: null,
+            loadResultsTimer: -1,
             sort: { column: searchResultsTable.sortedColumn, reverse: searchResultsTable.reverseSort },
         });
         updateSearchResultsData(searchId);
@@ -509,6 +509,7 @@ window.qBittorrent.Search = (function() {
                 },
                 onClose: function() {
                     clearTimeout(loadSearchPluginsTimer);
+                    loadSearchPluginsTimer = -1;
                 }
             });
         }
@@ -571,6 +572,7 @@ window.qBittorrent.Search = (function() {
         if (state) {
             state.running = false;
             clearTimeout(state.loadResultsTimer);
+            state.loadResultsTimer = -1;
         }
     };
 
