@@ -829,13 +829,11 @@ window.qBittorrent.DynamicTable = (function() {
 
         removeRow: function(rowId) {
             this.selectedRows.erase(rowId);
-            const tr = this.getTrByRowId(rowId);
-            if (tr !== null) {
-                tr.destroy();
+            if (this.rows.has(rowId))
                 this.rows.erase(rowId);
-                return true;
-            }
-            return false;
+            const tr = this.getTrByRowId(rowId);
+            if (tr !== null)
+                tr.destroy();
         },
 
         clear: function() {
