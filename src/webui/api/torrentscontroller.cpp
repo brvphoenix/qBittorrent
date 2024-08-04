@@ -888,9 +888,6 @@ void TorrentsController::removeTrackersAction()
         urls << QUrl::fromPercentEncoding(urlStr.toLatin1());
 
     torrent->removeTrackers(urls);
-
-    if (!torrent->isStopped())
-        torrent->forceReannounce();
 }
 
 void TorrentsController::addPeersAction()
