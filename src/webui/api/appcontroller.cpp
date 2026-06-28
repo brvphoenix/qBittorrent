@@ -132,14 +132,9 @@ void AppController::processInfoAction()
 
 void AppController::shutdownAction()
 {
-    // Special handling for shutdown, we
-    // need to reply to the WebUI before
-    // actually shutting down.
-    QTimer::singleShot(100ms, Qt::CoarseTimer, qApp, []
-    {
-        QCoreApplication::quit();
-    });
-    setResult(QString());
+        QCoreApplication::exit();
+
+
 }
 
 void AppController::preferencesAction()
