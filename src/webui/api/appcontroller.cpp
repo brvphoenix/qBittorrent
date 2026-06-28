@@ -137,7 +137,7 @@ void AppController::shutdownAction()
     // actually shutting down.
     QTimer::singleShot(100ms, Qt::CoarseTimer, qApp, []
     {
-        QCoreApplication::exit();
+        QCoreApplication::quit();
     });
     setResult(QString());
 }
